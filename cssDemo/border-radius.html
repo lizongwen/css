@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform:translate(-50%,-50%);
+				-webkit-transform:translate(-50%,-50%);/*safari*/
+				width: 500px;
+				height: 500px;
+				background: lawngreen;
+				transition: border-radius 2s;
+				/*水平半径(左上，右上，右下，左下)/垂直半径(左上，右上，右下，左下)*/
+				/*border-radius: 300px 200px 300px 400px/200px 300px 400px 500px;*/
+				border-radius: 300px 200px/300px 200px 250px;/*相当与border-radius: 300px 200px 300px 200px/300px 200px 300px 200px;*/
+				behavior: url(PIE.htc);
+			}
+			.box:hover{
+				border-radius: 300px 600px/500px 500px;
+			}
+			.box2{
+				cursor: pointer;
+				width: 100px;
+				height: 50px;
+				background: #0fb705;
+				border-radius: 25px;
+				transition: background 0.3s ease-in-out;
+				behavior: url(PIE.htc);
+			}
+			.box2.unswitch{
+				background: lavender;
+			}
+			.switch-label{
+				width: 50%;
+				height: 100%;
+				border-radius: 25px;
+				background: lawngreen;
+				transition: margin-left 0.3s ease-in-out;
+				behavior: url(PIE.htc);
+			}
+			.switch-label.right{
+				margin-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div id="box2" class="box2">
+			<div id="switch-label" class="switch-label"></div>
+		</div>
+		<script src="jquery.1.11.1.js"></script>
+		<script>
+			$("#box2").click(function(){
+				$(this).toggleClass("unswitch")
+				$("#switch-label").toggleClass("right");
+			});
+		</script>
+	</body>
+</html>
