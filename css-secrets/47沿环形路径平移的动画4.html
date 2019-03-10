@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.path {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background-color: yellow;
+		}
+
+		.avatar {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			animation: spin 3s infinite linear;
+		}
+
+		@keyframes spin {
+			from{
+				transform:  rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn);
+			}
+			to {
+				transform:  rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="path">
+		<img src="avatar.jpg" class="avatar">
+	</div>
+</body>
+
+</html>

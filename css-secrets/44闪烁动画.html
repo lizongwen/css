@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.highlight{
+			animation:1s blink-smooth 3 linear;
+		}
+		@keyframes blink-smooth {
+			/* form状态就是没有动画的状态 */
+			to{
+				color:transparent;
+			}
+		}
+
+		/* 第二种 */
+		.highlight1{
+			animation:1s blink-smooth1 3 linear;
+		}
+		@keyframes blink-smooth1 {
+			/* form状态就是没有动画的状态 */
+			50%{
+				color:transparent;
+			}
+		}
+		/* 第三种 */
+		.highlight2{
+			animation:.5s blink-smooth2 6 alternate linear;
+		}
+		@keyframes blink-smooth2 {
+			/* form状态就是没有动画的状态 */
+			to{
+				color:transparent;
+			}
+		}
+		/* 第四种 */
+		.highlight3{
+			animation:1s blink-smooth3 3 steps(1);
+		}
+		@keyframes blink-smooth3 {
+			/* form状态就是没有动画的状态 */
+			50%{
+				color:transparent;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="highlight">闪烁文字</div>
+	<div class="highlight1">闪烁文字1</div>
+	<div class="highlight2">闪烁文字2</div>
+	<div class="highlight3">闪烁文字3</div>
+</body>
+</html>

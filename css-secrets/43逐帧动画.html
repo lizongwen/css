@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.loader{
+			text-indent: 200%;
+			white-space:nowrap;
+			overflow: hidden;
+			width: 100px;
+			height:100px;
+			border:1px skyblue solid;
+			background: url('逐帧图.png') no-repeat 0 0;
+			animation:loader 4s infinite linear;
+		}
+		@keyframes loader{
+			to{
+				background-position:-700px 0;
+			}
+		}
+		.loader2:hover{
+			animation:loader2 4s infinite steps(8);
+		}
+		.loader2{
+			text-indent: 200%;
+			white-space:nowrap;
+			overflow: hidden;
+			width: 100px;
+			height:100px;
+			border:1px skyblue solid;
+			background: url('逐帧图.png') no-repeat 0 0;
+		}
+		@keyframes loader2{
+			to{
+				background-position:-800px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="loader">loading...</div>
+	<div class="loader2">loading...</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#show {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, .5);
+			display: none;
+		}
+
+		a[href="#hide"] {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		/* hide可以不用写 */
+		/* #hide:target{
+			display:none;
+		} */
+
+		#show:target {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="#show">显示</a>
+	<!-- <div id="hide"> -->
+		<div id="show">
+			<a href="#hide"></a>
+		</div>
+	<!-- </div> -->
+
+</body>
+
+</html>

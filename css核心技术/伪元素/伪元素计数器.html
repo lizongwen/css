@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>伪元素</title>
+	<style>
+		body{
+			counter-reset: title;
+		}
+		ul{
+			list-style: none;
+			counter-reset:num;
+		}
+		ul>li:before{
+			counter-increment: num;
+			content: 'List' counter(num) ': '
+		}
+		h1{
+			counter-reset: content;
+		}
+		h1::before{
+			counter-increment: title;
+			content: 'The ' counter(title) ' '
+		}
+		h2:before{
+			counter-increment: content;
+			content: 'content ' counter(title) '.' counter(content) ' '
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			
+			AAAA</li>
+		<li>
+			BBBBB</li>
+		<li>
+			CCCCC</li>
+		<li>
+			DDDDD</li>
+	</ul>
+	<h1>Title</h1>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+	<h1>Title</h1>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+	<h1>Title</h1>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+	<h2>这是一段内容</h2>
+
+</body>
+</html>

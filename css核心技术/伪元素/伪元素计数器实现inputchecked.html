@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			counter-reset: checked;
+		}
+		input:checked{
+			counter-increment: checked;
+		}
+		div:after{
+			content:counter(checked) '个分类'
+		}
+	</style>
+</head>
+<body>
+	CSS3<input type="checkbox"/>
+	HTML5<input type="checkbox"/>
+	Javascript<input type="checkbox"/>
+	<div>你一共选择了</div>
+</body>
+</html>

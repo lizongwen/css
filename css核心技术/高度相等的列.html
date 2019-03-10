@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper{
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		.box{
+			width: 250px;
+			padding: 20px 20px 300px 20px;
+			margin-left:20px;
+			margin-bottom: -20px;
+			float: left;
+			background: coral
+		}
+		.bottom{
+			position: absolute;
+			bottom:0;
+			height: 20px;
+			width: 290px;
+			margin-left: -20px;
+			background: chartreuse
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box">
+			<div></div>
+			<div class="bottom"></div>
+		</div>
+		<div class="box">
+				<div></div>
+			<div class="bottom"></div>
+		</div>
+		<div class="box">
+			<div>中文中文</div>
+			<div>中文中文</div>
+			<div class="bottom"></div>
+		</div>
+	</div>
+	<div style="background:cadetblue">aa</div>
+</body>
+</html>

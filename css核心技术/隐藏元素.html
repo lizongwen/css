@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1 {
+			/* 位置不在 */
+			width: 50px;
+			height: 0;
+			font-size: 0
+		}
+
+		.box2 {
+			/* 位置还在 */
+			opacity: 0;
+		}
+
+		.box3 {
+			width: 100px;
+			height: 100px;
+			/* 看不见，位置还在 */
+			transform:scale(0)
+		}
+
+		.box4 {
+			font-size: 0
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">
+		一个盒子
+	</div>
+	<div class="box2">
+		二个盒子
+	</div>
+	<div class="box3">
+		三个盒子
+	</div>
+	<div class="box4">文字</div>
+</body>
+
+</html>

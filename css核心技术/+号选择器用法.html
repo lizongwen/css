@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,div{
+				margin:0;
+				padding:0;
+			}
+			.box{
+				width:400px;
+			}
+			.box>div{
+				width:100px;
+				height:35px;
+				line-height:35px;
+				text-align:center;
+				float:left;
+				border:1px solid #dedede;
+				box-sizing: border-box;
+			}
+			.box>div+div{
+				border-left:none;
+			}
+			/* 以下2种方法都行 */
+			/* .box>div~div{
+				border-left:none;
+			}
+			.box>div~div{
+				margin-left:-1px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>追梦子</div>
+			<div>CSS3</div>
+			<div>HTML5</div>
+			<div>Javascript</div>
+		</div>
+	</body>
+</html>

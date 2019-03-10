@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#box{
+			position: relative;
+		}
+		#box>i{
+			position: absolute;
+			top: 0;
+			width: 4px;
+			height: 35px;
+			background-color: #0bac84;
+			border-radius: 5px;
+		}
+		#box>i:nth-of-type(1){
+			left:0px;
+			animation:loading 1.2s ease-in infinite ;
+		}
+		#box>i:nth-of-type(2){
+			left:8px;
+			animation:loading 1.2s ease-in infinite .3s;
+		}
+		#box>i:nth-of-type(3){
+			left:16px;
+			animation:loading 1.2s ease-in infinite .6s;
+		}
+		#box>i:nth-of-type(4){
+			left:24px;
+			animation:loading 1.2s ease-in infinite .3s;
+		}
+		@keyframes loading{
+			50%{
+				transform: scaleY(.5)
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+	</div>
+</body>
+</html>

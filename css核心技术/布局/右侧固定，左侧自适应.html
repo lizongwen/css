@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	body,div,p{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		height: 35px;
+		line-height: 35px;
+		overflow: hidden;
+	}
+	.box a{
+		float: right;
+		width:80px;
+		height:100%;
+		text-align:center;
+		color:#fff;
+		background-color:orange;
+		text-decoration: none;
+	}
+	.box p{
+		height:100%;
+		text-align:center;/*文字居中是在去除浮动元素之外的宽度中居中的，因为文字本身与浮动元素不重叠*/
+		background-color:#ccc;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="javascript:;">确定</a>
+		<p>价格：￥120</p>
+	</div>
+</body>
+</html>

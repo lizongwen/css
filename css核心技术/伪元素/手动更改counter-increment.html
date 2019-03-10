@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body{
+			counter-reset: num;
+		}
+		input:nth-of-type(1):checked{
+			counter-increment: num 5;
+		}
+		input:nth-of-type(2):checked{
+			counter-increment: num 2;
+		}
+		input:nth-of-type(3):checked{
+			counter-increment: num 7;
+		}
+		input:nth-of-type(4):checked{
+			counter-increment: num 1;
+		}
+		div:after{
+			content:'Count ' counter(num)
+		}
+	</style>
+</head>
+<body>
+	5<input type="checkbox"/>
+	2<input type="checkbox"/>
+	7<input type="checkbox"/>
+	1<input type="checkbox"/>
+	<div></div>
+</body>
+</html>

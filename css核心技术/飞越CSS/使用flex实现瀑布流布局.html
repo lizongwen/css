@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body,div{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box img{
+			flex-grow: 1;
+			margin: 5px;
+			height: 200px;
+			object-fit: cover;
+		}
+		@media (min-width:1200px){
+			.box img:nth-last-of-type(-n + 2){/*2代表最后一行有几个图片，数字就写几*/
+				flex-grow: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="img/1.png" alt="" srcset="">
+		<img src="img/2.png" alt="" srcset="">
+		<img src="img/3.png" alt="" srcset="">
+		<img src="img/4.png" alt="" srcset="">
+		<img src="img/5.png" alt="" srcset="">
+		<img src="img/6.png" alt="" srcset="">
+		<img src="img/7.png" alt="" srcset="">
+	</div>
+</body>
+</html>

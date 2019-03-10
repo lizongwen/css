@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			position: relative;
+		}
+		.box{
+			position: relative;
+			height: 600px;
+		}
+		div>div{
+			position: absolute;
+			height: 40px;
+			background:lightcoral;
+		}
+		/* left right top bottom是偏移属性 默认值auto会根据包括容器自动设置正负,同时设置left、right，right偏移失效 */
+		.item1{
+			/* 总宽度100%，包含块宽度-50px+100%+50px 设置了right，left没设置默认auto自动计算为-50px 从包含块左边-50px位置开始 */
+			top:50px;
+			right:50px;
+			width: 100%;
+		}
+		.item2{
+			/* 总宽度100%,包含块宽度50px+100%-50px,从包含块左边50px位置开始,right偏移失效， 从包含块左边50px位置开始偏移*/
+			top:100px;
+			left:50px;
+			width: 100%;
+		}
+		.item3{
+			/* 总宽度100%,包含块宽度50px+100%+50px,从包含块左边50px位置开始,right偏移失效 从包含块左边50px位置开始偏移*/
+			top:150px;
+			left:50px;
+			right:50px;
+			width: 100%;
+		}
+		.item4{
+			/* 总宽度100%,包含块宽度-50px+100%+50px,设置了right，left设置auto自动计算为-50px，right偏移失效,从包含块左边-50px位置开始偏移 */
+			top:200px;
+			left:auto;
+			right:50px;
+			width: 100%;
+		}
+		.item5{
+			/* 总宽度100%,包含块宽度0px+100%+0px，上下左右设置auto，相当于没有设置，默认是auto，自动计算为0， 从包含块左边0px位置开始偏移*/
+			top:auto;
+			left:auto;
+			right:auto;
+			bottom:auto;
+			width: 100%;
+		}
+		.item6{
+			/* 总宽度200+100，包含块宽度100px+100px+200px+剩下宽度，right偏移失效，从包含块左边100px位置开始偏移*/
+			top:250px;
+			left:100px;
+			margin-left: 100px;
+			width: 200px;
+		}
+		.item7{
+			/* 总宽度200+margin(上下左右)==包含块宽高 从包含块左边0px位置开始偏移*/
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin: auto;
+			width: 200px;
+		}
+		.item8{
+			/* 总宽度200px,包含块宽度0px+200px++剩下宽度，上下左右设置auto，相当于没有设置，默认是auto，自动计算为0，right计算为剩下宽度，right偏移失效 从包含块左边0px位置开始偏移*/
+			top:auto;
+			left:auto;
+			right:auto;
+			bottom:auto;
+			margin:auto;
+			width: 200px;
+			background: lightgreen
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="item1">item1</div>
+		<div class="item2">item2</div>
+		<div class="item3">item3</div>
+		<div class="item4">item4</div>
+		<div class="item5">item5</div>
+		<div class="item6">item6</div>
+		<div class="item7">item7</div>
+		<div class="item8">item8</div>
+	</div>
+</body>
+</html>
