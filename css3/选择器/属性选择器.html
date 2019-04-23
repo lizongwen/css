@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div[title|='动力']{
+			color:red
+		}
+		div[title*='是']{
+			color:rgba(250, 4, 250, 0.719)
+		}
+		div[title1~='动力']{
+			color:rgb(15, 247, 53)
+		}
+		div[title^='学']{
+			color:cyan
+		}
+		div[title$='来']{
+			color:blue
+		}
+	</style>
+
+</head>
+<body>
+	<div title="我是P">p11</div>
+	<div name="p12">p12</div>
+	<div name="p12" title="我是div">我的div</div>
+	<div title="动力-学院">动力学院</div>
+	<div title="动力学院">动力学院1</div>
+	<div title="起 动力 来">起 动力 来</div>
+	<div title="学动 动力 ">学动 动力 </div>
+	<div title1="动力学院">动力学院1</div>
+	<div title1="起 动力 来">起 动力 来</div>
+	<div title1="学动 动力 ">学动 动力 </div>
+</body>
+</html>
