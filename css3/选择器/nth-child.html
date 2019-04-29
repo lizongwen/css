@@ -1,36 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<style>
-		div{
-			width: 100px;
-			height: 100px;
-			margin-bottom: 10px;
-			background: blue
+		.wrap {
+			overflow: hidden;
 		}
-		div:nth-of-type(4n){
+
+		.box1,
+		.box2,
+		.box3,
+		.box4,
+		.box5 {
+			width: 30px;
+			height: 30px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			background: blue;
+			float: left;
+		}
+		.box1:nth-child(n+3) {
 			background: red
+		}
+
+		.box2:nth-child(-n+2) {
+			background: red
+		}
+
+		.box3:nth-last-child(n+3) {
+			background: red
+		}
+
+		.box4:nth-last-child(-n+2) {
+			background: red
+		}
+		.box :nth-child(5){
+			background: green
 		}
 	</style>
 </head>
+
 <body>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<p>---</p>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<p>-----</p>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
+	<div class="wrap">
+		<div class="box1">1</div>
+		<div class="box1">2</div>
+		<div class="box1">3</div>
+		<div class="box1">4</div>
+		<div class="box1">5</div>
+		<div class="box1">6</div>
+		<div class="box1">7</div>
+		<div class="box1">8</div>
+		<div class="box1">9</div>
+		<div class="box1">10</div>
+		<div class="box1">11</div>
+		<div class="box1">12</div>
+		<div class="box1">13</div>
+		<div class="box1">14</div>
+		<div class="box1">15</div>
+		<div class="box1">16</div>
+		<div class="box1">17</div>
+		<div class="box1">18</div>
+	</div>
+	<div class="wrap">
+		<div class="box2">1</div>
+		<div class="box2">2</div>
+		<div class="box2">3</div>
+		<div class="box2">4</div>
+		<div class="box2">5</div>
+		<div class="box2">6</div>
+		<div class="box2">7</div>
+		<div class="box2">8</div>
+		<div class="box2">9</div>
+		<div class="box2">10</div>
+		<div class="box2">11</div>
+		<div class="box2">12</div>
+		<div class="box2">13</div>
+		<div class="box2">14</div>
+		<div class="box2">15</div>
+		<div class="box2">16</div>
+		<div class="box2">17</div>
+		<div class="box2">18</div>
+	</div>
+	<div class="wrap">
+		<div class="box3">1</div>
+		<div class="box3">2</div>
+		<div class="box3">3</div>
+		<div class="box3">4</div>
+		<div class="box3">5</div>
+		<div class="box3">6</div>
+		<div class="box3">7</div>
+		<div class="box3">8</div>
+		<div class="box3">9</div>
+		<div class="box3">10</div>
+		<div class="box3">11</div>
+		<div class="box3">12</div>
+		<div class="box3">13</div>
+		<div class="box3">14</div>
+		<div class="box3">15</div>
+		<div class="box3">16</div>
+		<div class="box3">17</div>
+		<div class="box3">18</div>
+	</div>
+	<div class="wrap">
+		<div class="box4">1</div>
+		<div class="box4">2</div>
+		<div class="box4">3</div>
+		<div class="box4">4</div>
+		<div class="box4">5</div>
+		<div class="box4">6</div>
+		<div class="box4">7</div>
+		<div class="box4">8</div>
+		<div class="box4">9</div>
+		<div class="box4">10</div>
+		<div class="box4">11</div>
+		<div class="box4">12</div>
+		<div class="box4">13</div>
+		<div class="box4">14</div>
+		<div class="box4">15</div>
+		<div class="box4">16</div>
+		<div class="box4">17</div>
+		<div class="box4">18</div>
+	</div>
+	<div class="wrap box">
+			<div class="box5">1</div>
+			<div class="box5">2</div>
+			<div class="box5">3</div>
+			<div class="box5">4</div>
+			<div class="box5">5</div>
+			<div class="box5">6</div>
+			<div class="box5">7</div>
+			<div class="box5">8</div>
+			<div class="box5">9</div>
+			<div class="box5">10</div>
+			<div class="box5">11</div>
+			<div class="box5">12</div>
+			<div class="box5">13</div>
+			<div class="box5">14</div>
+			<div class="box5">15</div>
+			<div class="box5">16</div>
+			<div class="box5">17</div>
+			<div class="box5">18</div>
+		</div>
 </body>
+
 </html>
