@@ -11,16 +11,15 @@
 <body>
 	<div id="box"></div>
 	<script>
+		var box = document.getElementById('box');
 		var i = 0;
 		var star = 0;
-		var box = document.getElementById('box');
 		var timer;
 		function fun() {
-			var end = +new Date();
 			if (i > 5) {
 				return;
 			}
-			if (timer - star == 60) {
+			if (timer - star == 180) {
 				console.log(i);
 				box.innerHTML = i;
 				i++;
