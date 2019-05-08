@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.wrap{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			perspective: 3000px;
+			perspective-origin: center;
+			/* perspective-origin: left; */
+		}
+		.box {
+			/* position: absolute; */
+			width: 100px;
+			height: 100px;
+			background: red;
+			transform: translate3d(100px, 100px,0);
+			transition: transform 2s linear;
+		}
+		.box:hover{
+			transform: translate3d(100px, 100px,3300px);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="box"></div>
+		<p class="p"></p>
+	</div>
+</body>
+
+</html>
