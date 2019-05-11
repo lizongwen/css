@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.wrap {
+			width: 300px;
+			height:300px;
+			border: 1px solid red;
+			perspective: 200px;
+			perspective-origin: top;
+		}
+		.box1,.box2,.box3,.box4,.box5,.box6{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top:0;
+			left:0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			margin: auto;
+			opacity: .5;
+			
+		}
+		.box1{
+			transform: rotateZ(45deg);
+			background: rgb(15, 15, 241);
+			
+		}
+		.box2{
+			transform: translate3d(0,0,-50px);
+			background: rgb(231, 38, 13)
+		}
+		.box3{
+			transform: translate3d(50px,0,0) rotateY(-90deg);
+			background: lawngreen
+		}
+		.box4{
+			transform: translate3d(-50px,0,0) rotateY(90deg);
+			background: lightseagreen
+		}
+		.box5{
+			transform: translate3d(0,50px,0) rotateX(90deg);
+			background: lightcoral
+		}
+		.box6{
+			transform: translate3d(0,-50px,0) rotateX(-90deg);
+			background: lightgreen
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="box">
+			<div class="box1">李宗文</div>
+			<!-- <div class="box2">李宗文</div>
+			<div class="box3">李宗文</div>
+			<div class="box4">李宗文</div>
+			<div class="box5">李宗文</div>
+			<div class="box6">李宗文</div> -->
+		</div>
+	</div>
+
+</body>
+
+</html>

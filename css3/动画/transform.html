@@ -7,22 +7,24 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<style>
-		.wrap{
+		.wrap {
 			width: 300px;
 			height: 300px;
 			border: 1px solid red;
 			perspective: 3000px;
 			perspective-origin: center;
 		}
+
 		.box {
 			width: 100px;
 			height: 100px;
 			background: red;
-			transform: translate3d(100px, 100px,0);
+			transform: translate3d(0, 0, 0);
 			transition: transform 2s linear;
 		}
-		.box:hover{
-			transform: translate3d(100px, 100px,1000px);
+
+		.box:hover {
+			transform: translate3d(100px, 100px, 0 );
 		}
 	</style>
 </head>
