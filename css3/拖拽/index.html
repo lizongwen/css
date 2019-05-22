@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+
+		.box1 {
+			width: 500px;
+			height: 500px;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <img src="./bg.png" draggable="true"> -->
+	<!-- <div class="box" id="box" draggable="true" ondragstart="dragstartHander(event)"></div> -->
+	<div class="box1" ondragover="dragoverHander(event)" ondrop="dropHander(event)">
+		<div class="box" id="box" draggable="true" ondragstart="dragstartHander(event)"></div>
+	</div>
+	<script>
+		function dragstartHander(event) {
+			event.dataTransfer.setData("Text", event.target.id)
+		}
+		function dragoverHander(event) {
+			event.preventDefault();
+		}
+		function dropHander(event) {
+			event.preventDefault();
+			event.stopPropagation();
+			var id = event.dataTransfer.getData('Text');
+			console.log(event)
+			document.getElementById(id).style.left=event.offsetX+'px';
+			document.getElementById(id).style.top=event.offsetY+'px';
+			// event.target.removeChild(document.getElementById(id))
+		}
+	</script>
+</body>
+
+</html>
