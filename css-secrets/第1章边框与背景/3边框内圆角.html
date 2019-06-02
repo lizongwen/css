@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1 {
+			width: 150px;
+			height: 150px;
+			margin: 50px auto;
+			border:10px solid #655;
+			border-radius: 50px;
+			outline: 20px solid deeppink;
+			box-shadow: 0 0 0 20px blue/*用box-shadow来弥补空隙*/
+		}
+		.box2 {
+			width: 150px;
+			height: 150px;
+			margin: 50px auto;
+			border:10px solid #655;
+			border-radius: 50px;
+			outline: 10px solid deeppink;/*描边宽度太小不行，不能小于(根号2-1)r*/
+			box-shadow: 0 0 0 20px blue
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+
+</html>

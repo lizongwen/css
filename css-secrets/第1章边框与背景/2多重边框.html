@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1 {
+			width: 100px;
+			height: 100px;
+			margin: 20px auto;
+			/*不占空间box-shadow:x偏移量 y偏移量 模糊半径 扩展半径 颜色值*/
+			box-shadow: 0 0 0 10px #655;
+		}
+
+		.box2 {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			/*不占空间box-shadow:x偏移量 y偏移量 模糊半径 扩展半径 颜色值*/
+			box-shadow: 0 0 0 10px #655,
+				0 0 0 15px deeppink,
+				0 0 5px 15px rgba(0, 0, 0, .6);
+		}
+		.box3 {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			border:15px solid #655;
+			outline:5px solid deeppink;/*可做重边框*/
+		}
+		.box4 {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			border-radius: 10px;
+			border:15px solid #655;
+			outline:5px solid deeppink;/*不会贴合border-radius*/
+		}
+		.box5 {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			border-radius: 10px;
+			border:15px solid #655;
+			outline:1px dashed #fff;
+			outline-offset: -8px/*可以是负值*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+	<div class="box7"></div>
+</body>
+
+</html>

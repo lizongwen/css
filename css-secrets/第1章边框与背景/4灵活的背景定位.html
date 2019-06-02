@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		/*background-position的值位置是指相对于盒子左上角的位置*/
+		.box1 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: 0% 0%;
+			color: #fff;
+		}
+
+		.box2 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left top;
+			color: #fff;
+		}
+
+		.box3 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: 20px 20px;
+			color: #fff;
+		}
+
+		.box4 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: -20px -20px;
+			color: #fff;
+		}
+
+		.box5 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left 20px top;
+			color: #fff;
+		}
+
+		.box6 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left top 20px;
+			color: #fff;
+		}
+
+		.box7 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left bottom;
+			color: #fff;
+		}
+
+		.box8 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left 20px bottom;
+			color: #fff;
+		}
+
+		.box9 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left bottom 20px;
+			color: #fff;
+		}
+
+		.box10 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: left 20px bottom 20px;
+			color: #fff;
+		}
+
+		.box11 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: right 20px top 20px;
+			color: #fff;
+		}
+
+		.box12 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: right 20px bottom 20px;/*background-position扩展语法方式*/
+			color: #fff;
+		}
+
+		.box13 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			padding: 20px;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: right bottom;
+			background-origin: content-box;/*background-origin实现方式*/
+			color: #fff;
+		}
+		.box14 {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			padding: 20px;
+			border: 10px dashed #655;
+			background: #58a url(./img/code-pirate.svg) no-repeat;
+			background-position: calc(100% - 20px) calc(100% - 20px);/*calc实现方式*/
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">Code Pirate</div>
+	<div class="box2">Code Pirate</div>
+	<div class="box3">Code Pirate</div>
+	<div class="box4">Code Pirate</div>
+	<div class="box5">Code Pirate</div>
+	<div class="box6">Code Pirate</div>
+	<div class="box7">Code Pirate</div>
+	<div class="box8">Code Pirate</div>
+	<div class="box9">Code Pirate</div>
+	<div class="box10">Code Pirate</div>
+	<div class="box11">Code Pirate</div>
+	<div class="box12">Code Pirate</div>
+	<div class="box13">Code Pirate</div>
+	<div class="box14">Code Pirate</div>
+	<div class="box15">Code Pirate</div>
+</body>
+
+</html>
