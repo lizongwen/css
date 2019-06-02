@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>背景渐变</title>
+	<style>
+		div{
+			border:1px solid blue;
+			background-attachment: 
+		}
+		/* 	background:background-color background-image background-repeat background-position/background-size background-origin background-clip background-attachment
+		 */
+		.box1 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 20%, green);
+		}
+
+		.box2 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 20%, green 50%);
+		}
+
+		.box3 {
+			height: 100px;
+			background: grey repeating-linear-gradient(red, yellow 20%, green 50%);
+		}
+
+		.box4 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 20px, green 50%, #fff 50%);
+		}
+
+		.box5 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 20%, green 50%, #fff 50%);
+		}
+
+		.box6 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 40%, green) 0% 0%/auto 50%;
+		}
+		.box7 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 40%, green) no-repeat 0% 0%/auto 50%;
+		}
+		.box8 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 40%, green) no-repeat 0% 0%/50% 50%;
+		}
+		.box9 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 40%, green) no-repeat 50% 0%/50% 50%;
+		}
+		.box10 {
+			height: 100px;
+			background: grey linear-gradient(red, yellow 40%, green) no-repeat 50% 50%/50% 50% padding-box 	border-box scroll;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<br />
+	<div class="box2"></div>
+	<br />
+	<div class="box3"></div>
+	<br />
+	<div class="box4"></div>
+	<br />
+	<div class="box5"></div>
+	<br />
+	<div class="box6"></div>
+	<br />
+	<div class="box7"></div>
+	<br />
+	<div class="box8"></div>
+	<br />
+	<div class="box9"></div>
+	<br />
+	<div class="box10"></div>
+</body>
+
+</html>
