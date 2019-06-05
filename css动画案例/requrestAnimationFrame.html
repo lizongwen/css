@@ -14,12 +14,12 @@
 		var box = document.getElementById('box');
 		var i = 0;
 		var star = 0;
-		var timer;
+		var timer=0;
 		function fun() {
-			if (i > 100) {
+			if (i == 4) {
 				return;
 			}
-			if (timer - star == 60) {
+			if (timer - star >= 60) {
 				console.log(i);
 				box.innerHTML = i;
 				i++;
