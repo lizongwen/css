@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>9自适应椭圆</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			display: flex;
+			flex-wrap: wrap
+		}
+
+		/* border-radius: 左上角x 右上角x 右下角x 左下角x / 左上角y 右上角y 右下角y 左下角y */
+		/* border-top-left-radius: 左上角x 左上角y */
+		/*border-radius各半径减少一定按比例减少，并且相邻值合计小于宽或高*/
+		.box1 {
+			border: 5px solid red;
+			background-color: lawngreen;
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+		}
+
+		.box2 {
+			border: 5px solid red;
+			background-color: lawngreen;
+			width: 100px;
+			height: 100px;
+			border-radius: 50px 50px 50px 50px;
+		}
+
+		.box3 {
+			border: 5px solid blue;
+			background-color: lawngreen;
+			width: 100px;
+			height: 100px;
+			/*各边的合计值都大于100px*/
+			border-radius: 50px 150px 100px 80px;
+		}
+
+		.box4 {
+			position: relative;
+			/* left: -100px; */
+			border: 5px solid rgba(0, 0, 0, .5);
+			width: 100px;
+			height: 100px;
+			/*按比例减少之后每个相邻值合计都小于或者等于100px*/
+			border-radius: 20px 60px 40px 32px;
+		}
+
+		.box5 {
+			border: 5px solid red;
+			background-color: lawngreen;
+			width: 100px;
+			height: 100px;
+			border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
+		}
+
+		.box6 {
+			border: 5px solid red;
+			background-color: lawngreen;
+			width: 100px;
+			height: 100px;
+			border-top-left-radius: 50px 50px;
+			border-top-right-radius: 50px 50px;
+			border-bottom-left-radius: 50px 50px;
+			border-bottom-right-radius: 50px 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+</body>
+
+</html>
