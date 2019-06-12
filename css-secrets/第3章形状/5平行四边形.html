@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			color: #fff
+		}
+
+		.box1 {
+			width: 200px;
+			height: 100px;
+			background: #000;
+			transform: skewX(-45deg);
+		}
+		.box2 {
+			width: 200px;
+			height: 100px;
+			background: #000;
+			transform: skewX(-45deg);
+		}
+		.box2-1 {
+			width: 200px;
+			height: 100%;
+			transform: skewX(45deg);
+		}
+		.box3 {
+			width: 100px;
+			height: 200px;
+			background: #000;
+			transform: skewY(30deg);
+		}
+		.box4 {
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background: #000;
+		}
+		.box4:before{
+			content:'';
+			position: absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background: #58a;
+			transform: skewX(-45deg);
+			z-index: -1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">平行四边形</div><br />
+	<div class="box2">
+		<div class="box2-1">平行四边形</div>
+	</div><br />
+	<div class="box3">平行四边形</div><br />
+	<div class="box4">平行四边形</div><br />
+	<div class="box5"></div><br />
+	<div class="box6"></div><br />
+</body>
+
+</html>
