@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box{
+			position: relative;
+			width: 200px;
+			height:200px;
+			border-radius: 50%;
+			background: #000;
+			overflow: hidden;
+		}
+		.box1{
+			width: 50%;
+			height: 90px;
+			position: absolute;
+			top:50%;
+			/* margin-top: -10px; */
+			background: linear-gradient(160deg,rgba(255,255,255,0.8),transparent 60%) 50% 50% no-repeat;
+			animation: rotate 5s linear infinite;
+			transform-origin: right top;
+			clip-path: polygon(100% 0, 0 0, 0 100%);
+		}
+		@keyframes rotate{
+			to {
+				transform: rotateZ(360deg)
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1"></div>
+	</div>
+</body>
+</html>
