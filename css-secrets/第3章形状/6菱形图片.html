@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		img {
+			vertical-align: top;
+		}
+
+		.box1 {
+			width: 100px;
+			transform: rotate(45deg);
+			transform-origin: left bottom;
+			overflow: hidden;
+		}
+
+		.box1 img {
+			vertical-align: top;
+			max-width: 100%;
+			transform: rotate(-45deg) scale(1.42);
+		}
+
+		.box2 {
+			margin: 50px;
+			display: inline-block;
+			clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+			transition: 1s;
+		}
+
+		.box3 {
+			margin: 20px;
+			max-width: 300px;
+			display: inline-block;
+			clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+			transition: 1s;
+		}
+
+		.box2 img,
+		.box3 img {
+			max-width: 100%;
+		}
+
+		.box2:hover,
+		.box3:hover {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">
+		<img src="./img/adamcatlace.jpg">
+	</div><br />
+	<div class="box2">
+		<img src="./img/adamcatlace.jpg" />
+	</div><br />
+	<div class="box3">
+		<img src="./img/adam-sleeping.jpg" />
+	</div><br />
+</body>
+
+</html>
