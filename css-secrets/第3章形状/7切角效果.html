@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1 {
+			width: 200px;
+			height: 100px;
+			background: linear-gradient(-45deg, transparent 15px, #58a 0)
+		}
+
+		.box2 {
+			width: 200px;
+			height: 100px;
+			background:
+				linear-gradient(-45deg, transparent 15px, #58a 0) right,
+				linear-gradient(45deg, transparent 15px, #655 0) left;
+			background-repeat: no-repeat;
+			background-size: 50% 100%;
+		}
+		.box3 {
+			width: 200px;
+			height: 100px;
+			background:
+				linear-gradient(135deg, transparent 15px, #58a 0) top left,
+				linear-gradient(-135deg, transparent 15px, #655 0) top right,
+				linear-gradient(45deg, transparent 15px, #095 0) bottom left,
+				linear-gradient(-45deg, transparent 15px, #509 0) bottom right;
+			background-repeat: no-repeat;
+			background-size: 50% 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div><br />
+	<div class="box2"></div><br />
+	<div class="box3"></div><br />
+</body>
+
+</html>
