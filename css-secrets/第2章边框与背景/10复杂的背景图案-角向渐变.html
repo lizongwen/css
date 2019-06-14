@@ -20,11 +20,32 @@
 		}
 
 		.box3 {
+			position: relative;
 			width: 200px;
-			height: 100px;
-			background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
-			background-size: 30px 30px;
-			background-repeat: no-repeat
+			height: 200px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+
+		.box3::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-image: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3) 15%, transparent 0);
+			animation: rotate 4s linear infinite;
+			transform: rotate(0deg) scale(0.8)
+		}
+		.box3::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-image: conic-gradient(from 180deg,rgba(255, 255, 0, 0.3) , transparent 15%);
+			animation: rotate3 4s linear infinite;
+			transform: rotate(0deg) scale(0.8)
 		}
 
 		.box4 {
@@ -32,6 +53,62 @@
 			height: 100px;
 			background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
 			background-size: 30px 30px;
+			background-repeat: no-repeat;
+		}
+
+		.box5 {
+			width: 200px;
+			height: 100px;
+			background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
+			background-size: 30px 30px;
+		}
+
+		.box6 {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background: radial-gradient(white, black);
+		}
+
+		.box6:before,
+		.box6:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -50%;
+			width: 100%;
+			height: 100%;
+			opacity: .5;
+			mix-blend-mode: overlay;
+			animation: rotate1 4.4s ease-in-out infinite;
+			content: '';
+		}
+
+		.box6:before {
+			background: conic-gradient(rgba(3, 10, 0, 0.42), rgba(3, 10, 0, 0.91), rgba(4, 9, 1, 0.02), rgba(3, 10, 0, 0.22), rgba(3, 10, 0, 0.5), rgba(3, 10, 0, 0.55), rgba(3, 10, 0, 0.27), rgba(3, 10, 0, 0.45), rgba(3, 10, 0, 0.2), rgba(4, 9, 2, 0.11), rgba(3, 10, 0, 0.61), rgba(3, 10, 0, 0.38), rgba(3, 10, 0, 0.34), rgba(4, 8, 2, 0.34), rgba(3, 10, 0, 0.27), rgba(3, 10, 0, 0.21), rgba(3, 10, 0, 0.26), rgba(3, 10, 0, 0.35), rgba(3, 10, 0, 0.22), rgba(3, 10, 0, 0.09), rgba(3, 10, 0, 0.64), rgba(3, 10, 0, 0.11), rgba(3, 10, 0, 0.42), rgba(3, 10, 0, 0.91), rgba(4, 9, 1, 0.02), rgba(3, 10, 0, 0.22), rgba(3, 10, 0, 0.5), rgba(3, 10, 0, 0.55), rgba(3, 10, 0, 0.27), rgba(3, 10, 0, 0.45), rgba(3, 10, 0, 0.2), rgba(4, 9, 2, 0.11), rgba(3, 10, 0, 0.61), rgba(3, 10, 0, 0.38), rgba(3, 10, 0, 0.34), rgba(4, 8, 2, 0.34), rgba(3, 10, 0, 0.27), rgba(3, 10, 0, 0.21), rgba(3, 10, 0, 0.26), rgba(3, 10, 0, 0.35), rgba(3, 10, 0, 0.22), rgba(3, 10, 0, 0.09), rgba(3, 10, 0, 0.64));
+		}
+
+		.box6:after {
+			background: conic-gradient(rgba(3, 10, 0, 0.03), rgba(3, 10, 0, 0.32), rgba(3, 10, 0, 0.65), rgba(3, 10, 0, 0.07), rgba(3, 10, 0, 0.3), rgba(3, 10, 0, 0.55), rgba(3, 10, 0, 0.09), rgba(3, 10, 0, 0.79), rgba(3, 10, 0, 0.26), rgba(3, 10, 0, 0.01), rgba(3, 10, 0, 0.74), rgba(3, 10, 0, 0.48), rgba(3, 10, 0, 0.52), rgba(3, 10, 0, 0.36), rgba(3, 10, 0, 0.03), rgba(3, 10, 0, 0.21), rgba(3, 10, 0, 0.18), rgba(3, 10, 0, 0.3), rgba(3, 10, 0, 0.7), rgba(3, 10, 0, 0.3), rgba(3, 10, 0, 0.03), rgba(3, 10, 0, 0.32), rgba(3, 10, 0, 0.65), rgba(3, 10, 0, 0.07), rgba(3, 10, 0, 0.3), rgba(3, 10, 0, 0.55), rgba(3, 10, 0, 0.09), rgba(3, 10, 0, 0.79), rgba(3, 10, 0, 0.26), rgba(3, 10, 0, 0.01), rgba(3, 10, 0, 0.74), rgba(3, 10, 0, 0.48), rgba(3, 10, 0, 0.52), rgba(3, 10, 0, 0.36), rgba(3, 10, 0, 0.03), rgba(3, 10, 0, 0.21), rgba(3, 10, 0, 0.18), rgba(3, 10, 0, 0.3), rgba(3, 10, 0, 0.7));
+			animation-duration: 5.7s;
+			animation-direction: reverse;
+		}
+
+		@keyframes rotate {
+			to {
+				transform: rotate(360deg) scale(0.8)
+			}
+		}
+
+		@keyframes rotate1 {
+			to {
+				transform: rotate(1turn);
+			}
+		}
+		@keyframes rotate3{
+			to {
+				transform: rotate(-360deg) scale(0.8)
+			}
 		}
 	</style>
 </head>
