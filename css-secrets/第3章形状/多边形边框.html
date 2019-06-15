@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<style>
+		#hexagon {
+			top: 100px;
+			width: 100px;
+			height: 55px;
+			background: red;
+			position: relative;
+		}
+
+		#hexagon:before {
+			content: "";
+			position: absolute;
+			top: -25px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-bottom: 25px solid red;
+		}
+
+		#hexagon:after {
+			content: "";
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-top: 25px solid red;
+		}
+
+		#hexagon1 {
+			top: 50px;
+			left: 5px;
+			width: 90px;
+			height: 45px;
+			background: #333;
+			position: relative;
+		}
+
+		#hexagon1:before {
+			content: "";
+			position: absolute;
+			top: -22px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 45px solid transparent;
+			border-right: 45px solid transparent;
+			border-bottom: 22px solid #333;
+		}
+
+		#hexagon1:after {
+			content: "";
+			/*必须写否则没有高度*/
+			position: absolute;
+			bottom: -22px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 45px solid transparent;
+			border-right: 45px solid transparent;
+			border-top: 22px solid #333;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			/* clip-path: polygon(5.85em 3.125em, 4.4875em 0.76508em, 1.7625em 0.76508em, 0.4em 3.125em, 1.7625em 5.48492em, 4.4875em 5.48492em, 5.85em 3.125em, 6.25em 3.125em, 4.6875em 5.83133em, 1.5625em 5.83133em, 0em 3.125em, 1.5625em 0.41867em, 4.6875em 0.41867em, 6.25em 3.125em); */
+			clip-path: polygon(93.6px 50px, 71.8px 12.24128px, 28.2px 12.24128px, 6.4px 50px, 28.2px 87.75872px, 71.8px 87.75872px, 93.6px 50px, 100px 50px, 75px 93.30128px, 25px 93.30128px, 0 50px, 25px 6.69872px, 75px 6.69872px, 100px 50px);
+			/* clip-path: polygon(93.6px 50px, 71.8px 12.24128px, 28.2px 12.24128px, 6.4px 50px, 28.2px 87.75872px, 71.8px 87.75872px, 93.6px 50px, 100px 50px, 75px 93.30128px, 25px 93.30128px, 0 50px, 25px 6.69872px, 75px 6.69872px, 100px 50px); */
+			background-color: #c8c8c8;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div id="hexagon"></div> -->
+	<!-- <div id="hexagon1"></div> -->
+	<div class="box"></div>
+
+</body>
