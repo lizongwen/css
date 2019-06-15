@@ -2,15 +2,16 @@
 
 <head>
 	<style>
-		#hexagon {
-			top: 100px;
+		*{box-sizing: border-box}
+		#hexagon1 {
+			/* top: 100px; */
 			width: 100px;
 			height: 55px;
 			background: red;
 			position: relative;
 		}
 
-		#hexagon:before {
+		#hexagon1:before {
 			content: "";
 			position: absolute;
 			top: -25px;
@@ -22,7 +23,7 @@
 			border-bottom: 25px solid red;
 		}
 
-		#hexagon:after {
+		#hexagon1:after {
 			content: "";
 			position: absolute;
 			bottom: -25px;
@@ -34,7 +35,7 @@
 			border-top: 25px solid red;
 		}
 
-		#hexagon1 {
+		#hexagon2 {
 			top: 50px;
 			left: 5px;
 			width: 90px;
@@ -43,7 +44,7 @@
 			position: relative;
 		}
 
-		#hexagon1:before {
+		#hexagon2:before {
 			content: "";
 			position: absolute;
 			top: -22px;
@@ -55,7 +56,7 @@
 			border-bottom: 22px solid #333;
 		}
 
-		#hexagon1:after {
+		#hexagon2:after {
 			content: "";
 			/*必须写否则没有高度*/
 			position: absolute;
@@ -86,8 +87,8 @@
 </head>
 
 <body>
-	<div id="hexagon"></div>
 	<div id="hexagon1"></div>
+	<div id="hexagon2"></div>
 	<div class="box"></div>
 
 </body>

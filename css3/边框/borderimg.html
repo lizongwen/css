@@ -11,14 +11,26 @@
 			height:200px;
 			border:50px solid red;
 			border-image-source: url('../../cssDemo/img/bg.png');
-			border-image-slice: 100% fill;
-			border-image-width: 60px;
-			border-image-outset: 6px;
+			border-image-slice: 5 fill;
+			/* border-image-width: 60px; */
+			/* border-image-outset: 6px; */
+			border-image-repeat: stretch;
+			
+		}
+		.box1{
+			width: 200px;
+			height:200px;
+			border:5px solid red;
+			border-image-source: linear-gradient(red,blue);
+			border-image-slice: 5;
+			/* border-image-width: 60px; */
+			/* border-image-outset: 6px; */
 			
 		}
 	</style>
 </head>
 <body>
 	<div class="box"></div>
+	<div class="box1"></div>
 </body>
 </html>

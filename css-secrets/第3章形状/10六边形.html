@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body {
+			/* background:blue; */
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		.box1 {
+			width: 200px;
+			height: 115px;
+			position: relative;
+			margin: 70px auto 70px 10px;
+			border: 5px solid transparent;
+			border-image-source: linear-gradient(tomato, blue);
+			border-image-slice: 0 5;
+			border-width: 0 5px;
+		}
+
+		.box2 {
+			width: 200px;
+			height: 115px;
+			position: absolute;
+			top: 0;
+			left: -5px;
+			border-right: 5px solid transparent;
+			border-image-source: linear-gradient(blue, green);
+			border-image-slice: 0 5;
+			transform: rotate(60deg)
+		}
+
+		.box3 {
+			width: 200px;
+			height: 115px;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			border-right: 5px solid transparent;
+			border-image-source: linear-gradient(green, blue);
+			border-image-slice: 0 5;
+			transform: rotate(60deg)
+		}
+
+		.box4 {
+			width: 200px;
+			height: 115px;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			border-left: 5px solid transparent;
+			border-image-source: linear-gradient(red, tomato);
+			border-image-slice: 0 5;
+			transform: rotate(-60deg)
+		}
+
+		.box5 {
+			width: 200px;
+			height: 115px;
+			position: absolute;
+			top: 0;
+			left: -5px;
+			border-left: 5px solid transparent;
+			border-image-source: linear-gradient(tomato, red);
+			border-image-slice: 0 5;
+			transform: rotate(60deg)
+		}
+
+		.box6 {
+			margin-left: 10px;
+			width: 200px;
+			height: 230px;
+			clip-path: polygon(50% 0, 100% calc(100px * 0.5), 100% calc(100% - (100px * 0.5)), 50% 100%, 0 calc(100% - (100px * 0.5)), 0 calc(100px * 0.5));
+			background-color: black;
+		}
+		.box8 {
+			position: relative;
+			margin-left: 10px;
+			width: 200px;
+		}
+		.box8-1{
+			padding-top:115%;
+			clip-path: polygon(50% 0, 100% calc(86.9565217% * .288675), 100% calc(100% - (86.9565217% * .288675)), 50% 100%, 0 calc(100% - (86.9565217% * .288675)), 0 calc(86.9565217% * .288675));
+			background-color: black;
+		}
+		.box9 {
+			position: relative;
+			margin-left: 10px;
+			width: 200px;
+		}
+		.box9-1{
+			padding-top:115%;
+			clip-path: polygon(50% 0, 100% calc(86.9565217% * .288675), 100% calc(100% - (86.9565217% * .288675)), 50% 100%, 0 calc(100% - (86.9565217% * .288675)), 0 calc(86.9565217% * .288675),50% 0,50% 2px,calc(2px * 0.8660254) calc((86.9565217% * .288675) + (0.5 * 2px)),calc(2px * 0.8660254) calc(100% - ((86.9565217% * .288675) + (0.5 * 2px))),50% calc(100% - 2px),calc(100% - (2px * 0.8660254)) calc(100% - ((86.9565217% * .288675) + (0.5 * 2px))),calc(100% - (2px * 0.8660254)) calc((86.9565217% * .288675) + (0.5 * 2px)),50% 2px);
+			background-color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">
+		<div class="box2">
+			<div class="box3">
+				<div class="box4">
+					<div class="box5"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box6"></div>
+	<div class="box7"></div>
+	<div class="box8">
+		<div class="box8-1"></div>
+	</div>
+	<div class="box9">
+			<div class="box9-1"></div>
+		</div>
+</body>
+
+</html>
