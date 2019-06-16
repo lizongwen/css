@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.circle1 {
+			fill: lawngreen;
+		}
+
+		.circle2 {
+			fill: lawngreen;
+			stroke: #655;
+			stroke-width: 20
+		}
+
+		.circle3 {
+			fill: lawngreen;
+			stroke: #655;
+			stroke-width: 20;
+			stroke-dasharray: 20 8;
+		}
+
+		.circle4 {
+			fill: lawngreen;
+			stroke: #655;
+			stroke-width: 20;
+			stroke-dasharray: 20 250;
+		}
+
+		.circle5 {
+			fill: lawngreen;
+			stroke: #655;
+			stroke-width: 40;
+			stroke-dasharray: 20 315;
+		}
+
+		.circle6 {
+			fill: lawngreen;
+			stroke: #655;
+			stroke-width: 40;
+			stroke-dasharray: 100 315;
+		}
+
+		.circle7 {
+			fill: lawngreen;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 40;
+			stroke-dasharray: 40 126;
+		}
+
+		.circle8 {
+			fill: lawngreen;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 100;
+			stroke-dasharray: 100 315;
+		}
+
+		.svg9 {
+			transform: rotate(-90deg);
+			background: lawngreen;
+			border-radius: 50%;
+		}
+
+		.circle9 {
+			fill: #000;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 100;
+			stroke-dasharray: 100 315;
+		}
+
+		.svg10 {
+			transform: rotate(-90deg);
+			background: lawngreen;
+			border-radius: 50%;
+		}
+
+		.circle10 {
+			fill: #000;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 100;
+			stroke-dasharray: 0 315;
+			animation: fillup 5s linear infinite;
+		}
+
+		@keyframes fillup {
+			to {
+				stroke-dasharray: 315 315
+			}
+		}
+
+		.svg11 {
+			transform: rotate(-90deg);
+			background: lawngreen;
+			border-radius: 50%;
+		}
+
+		.circle11 {
+			fill: transparent;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 32;
+			/*可得到10%扇区*/
+			stroke-dasharray: 10 100;
+		}
+
+		.svg12 {
+			transform: rotate(-90deg);
+			background: lawngreen;
+			border-radius: 50%;
+		}
+
+		.circle12 {
+			fill: transparent;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 32;
+			/*可得到50%扇区*/
+			stroke-dasharray: 50 100;
+		}
+		.svg13 {
+			transform: rotate(-90deg);
+			background: lawngreen;
+			border-radius: 50%;
+		}
+
+		.circle13 {
+			fill: transparent;
+			stroke: #655;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 32;
+			/*可得到50%扇区*/
+			stroke-dasharray: 50 100;
+		}
+		.circle14{
+			fill: transparent;
+			stroke: red;
+			/*等于2倍的圆半径，就会完全遮住圆*/
+			stroke-width: 32;
+			/*可得到50%扇区*/
+			stroke-dasharray: 10 100;
+			stroke-dashoffset: -50
+		}
+	</style>
+</head>
+
+<body>
+	<svg width="200" height="200">
+		<circle class="circle1" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle2" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle3" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle4" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle5" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle6" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle7" cx="100" cy="100" r="20" />
+	</svg>
+	<svg width="200" height="200">
+		<circle class="circle8" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200" class="svg9">
+		<circle class="circle9" cx="100" cy="100" r="50" />
+	</svg>
+	<svg width="200" height="200" class="svg10">
+		<circle class="circle10" cx="100" cy="100" r="50" />
+	</svg><br />
+	<svg width="200" height="200" class="svg11" viewBox="0 0 32 32">
+		<circle class="circle11" cx="16" cy="16" r="16" />
+	</svg>
+	<svg width="300" height="300" class="svg12" viewBox="0 0 32 32">
+		<circle class="circle12" cx="16" cy="16" r="16" />
+	</svg>
+	<svg width="300" height="300" class="svg13" viewBox="0 0 32 32">
+		<circle class="circle13" cx="16" cy="16" r="16" />
+		<circle class="circle14" cx="16" cy="16" r="16" />
+	</svg>
+</body>
+
+</html>

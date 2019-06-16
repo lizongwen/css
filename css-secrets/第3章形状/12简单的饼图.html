@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background: linear-gradient(to right, transparent 50%, #655 0);
+			background-color: lawngreen;
+		}
+
+		.box2:before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			background-color: inherit;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			transform: rotate(.2turn);
+		}
+		.box3:before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			background-color: #655;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			transform: rotate(.2turn);
+		}
+		.box4:before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			background-color: inherit;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			animation: spin 3s linear infinite;
+		}
+		.box5:before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			background-color: #655;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			animation: spin 3s linear infinite;
+		}
+		.box6:before {
+			content: '';
+			display: block;
+			margin-left: 50%;
+			height: 100%;
+			background-color: inherit;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			animation: spin 3s linear infinite,bg 6s step-end infinite;
+		}
+		@keyframes  spin{
+			to{
+				transform: rotate(.5turn)
+			}
+		}
+		@keyframes  bg{
+			50%{
+				background-color: #655
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div><br />
+	<div class="box2"></div><br />
+	<div class="box3"></div><br />
+	<div class="box4"></div><br />
+	<div class="box5"></div><br />
+	<div class="box6"></div><br />
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			border-radius: 50%;
+			text-align: center;
+			background: linear-gradient(to right, transparent 50%, #655 0);
+			background-color: lawngreen;
+		}
+
+		.box1:before {
+			position: absolute;
+			content: '';
+			display: block;
+			top:0;
+			left:50%;
+			width: 50%;;
+			height: 100%;
+			background-color: inherit;
+			transform-origin: left;
+			border-radius: 0 100% 100% 0 /50%;
+			animation: spin 50s linear infinite,bg 100s step-end infinite;
+			/*单独动画属性必须写到复合写法后面，否则被复合写法覆盖而不起作用*/
+			animation-delay:inherit;
+			animation-play-state: paused;
+		}
+		@keyframes  spin{
+			to{
+				transform: rotate(.5turn)
+			}
+		}
+		@keyframes  bg{
+			50%{
+				background-color: #655
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1" style="animation-delay: -20s">20%</div><br />
+	<div class="box1" style="animation-delay: -60s">60%</div><br />
+	<!-- <div class="box2"></div><br />
+	<div class="box3"></div><br />
+	<div class="box4"></div><br />
+	<div class="box5"></div><br />
+	<div class="box6"></div><br /> -->
+</body>
+
+</html>
