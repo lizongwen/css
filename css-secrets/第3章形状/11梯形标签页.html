@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.box1 {
+			width: 200px;
+			height: 50px;
+			background: blue;
+			transform: perspective(.5em) rotateX(5deg);
+		}
+
+		.box2 {
+			position: relative;
+			width: 200px;
+			height: 50px;
+			background: rgba(255, 0, 0, .5);
+		}
+
+		.box2:before {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: green;
+			transform: perspective(.5em) rotateX(5deg);
+		}
+
+		.box3 {
+			position: relative;
+			width: 200px;
+			height: 50px;
+			background: rgba(255, 0, 0, .5);
+		}
+
+		.box3:before {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: green;
+			transform: perspective(.5em) rotateX(5deg);
+			transform-origin: bottom
+		}
+
+		.box4 {
+			position: relative;
+			width: 200px;
+			height: 50px;
+			background: rgba(255, 0, 0, .5);
+		}
+
+		.box4:before {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: green;
+			transform: scaleY(1.54) perspective(.5em) rotateX(5deg);
+			transform-origin: bottom
+		}
+
+		.nav {
+			font-size: 0
+		}
+
+		.navbtn {
+			font-size: 16px;
+			position: relative;
+			display: inline-block;
+			padding: 5px 15px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.navbtn.active {
+			z-index: 1;
+		}
+
+		.nav1 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(1.34) perspective(.5em) rotateX(5deg);
+			transform-origin: bottom;
+			background: #888;
+		}
+
+		.nav2 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(1.34) perspective(.5em) rotateX(5deg);
+			transform-origin: bottom left;
+			background: #888;
+		}
+
+		.nav3 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(1.34) perspective(.5em) rotateX(5deg);
+			transform-origin: bottom right;
+			background: #888;
+		}
+
+		.nav4 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(0.975) translateY(-3px) perspective(.5em) rotateX(5deg);
+			background: #888;
+		}
+
+		.nav5 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(0.975) translateY(-3px) perspective(.5em) rotateX(5deg);
+			transform-origin: center left;
+			background: #888;
+		}
+
+		.nav6 .navbtn:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border: 1px solid #d9d9d9;
+			border-radius: 5px 5px 0 0;
+			border-bottom: none;
+			transform: scaleY(0.975) translateY(-3px) perspective(.5em) rotateX(5deg);
+			transform-origin: center right;
+			background: #888;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">标签页</div><br />
+	<div class="box2">标签页</div><br />
+	<div class="box3">标签页</div><br />
+	<div class="box4">标签页</div><br />
+	<div class="nav nav1">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+	<br />
+	<div class="nav nav2">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+	<br />
+	<div class="nav nav3">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+	<br />
+	<div class="nav nav4">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+	<br />
+	<div class="nav nav5">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+	<br />
+	<div class="nav nav6">
+		<a href="javascript:;" class="navbtn">Home</a>
+		<a href="javascript:;" class="navbtn active">ProjectsProjects</a>
+		<a href="javascript:;" class="navbtn">About</a>
+	</div>
+</body>
+
+</html>
