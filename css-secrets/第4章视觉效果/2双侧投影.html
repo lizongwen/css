@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body {
+			/* background:#000; */
+		}
+
+		.box {
+			width: 200px;
+			height: 150px;
+			background: blue;
+		}
+
+		.box1 {
+			width: 200px;
+			height: 150px;
+			background: blue;
+			box-shadow:
+				5px 0px 5px -5px red,
+				-5px 0px 5px -5px red
+		}
+
+		.box2 {
+			width: 200px;
+			height: 150px;
+			background: blue;
+			box-shadow:
+				0px 5px 5px -5px red,
+				0px -5px 5px -5px red
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box"></div><br />
+	<div class="box1">box-shadow:5px 0px 5px -5px red,
+		-5px 0px 5px -5px red</div><br />
+	<div class="box2">box-shadow:0px 5px 5px -5px red,
+		0px -5px 5px -5px red</div><br />
+
+</body>
+
+</html>

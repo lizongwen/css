@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1{
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			border:5px dotted blue;
+			box-shadow: 0 0 10px red;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			border:5px dotted blue;
+			filter:drop-shadow(0 0 10px red)
+		}
+		.box3 {
+			width: 200px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			background:
+				linear-gradient(135deg, transparent 15px, #58a 0) top left,
+				linear-gradient(-135deg, transparent 15px, #655 0) top right,
+				linear-gradient(45deg, transparent 15px, #095 0) bottom left,
+				linear-gradient(-45deg, transparent 15px, #509 0) bottom right;
+			background-repeat: no-repeat;
+			background-size: 50% 50%;
+			box-shadow: 0 0 10px red;
+		}
+		.box4 {
+			width: 200px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			background:
+				linear-gradient(135deg, transparent 15px, #58a 0) top left,
+				linear-gradient(-135deg, transparent 15px, #655 0) top right,
+				linear-gradient(45deg, transparent 15px, #095 0) bottom left,
+				linear-gradient(-45deg, transparent 15px, #509 0) bottom right;
+			background-repeat: no-repeat;
+			background-size: 50% 50%;
+			/*drop-shadow也会给内部文字打上投影*/
+			filter: drop-shadow(0 0 10px red)
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">文本字体</div><br/>
+	<div class="box2"><span>文本字体</span></div><br/>
+	<div class="box3">文本字体</div><br/>
+	<div class="box4">文本字体</div><br/>
+</body>
+</html>
