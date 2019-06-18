@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		img {
+			width: 300px;
+		}
+
+		.img2 {
+			/*降低饱和度*/
+			filter: sepia(1)
+		}
+
+		.img3 {
+			/*提升饱和度*/
+			filter: saturate(4)
+		}
+
+		.img4 {
+			filter: hue-rotate(295deg)
+		}
+
+		.img5 {
+			filter: sepia(1) saturate(4) hue-rotate(295deg);
+			transition: .5s filter;
+		}
+
+		.img5:hover,
+		.img5:focus {
+			filter: none;
+		}
+		.a{
+			display: inline-block;
+			background:hsl(335, 100%, 50%)
+		}
+		.img6{
+			vertical-align: bottom;
+			/*混合模式*/
+			mix-blend-mode: luminosity;
+		}
+		.img7{
+
+			width: 300px;
+			height: 208px;
+			background-size: cover;
+			background-color: hsl(335, 100%, 50%);
+			background-image: url('./img/tiger.jpg');
+			background-blend-mode: luminosity;
+			transition: .5s background-color;
+		}
+		.img7:hover{
+			background-color:transparent
+		}
+	</style>
+</head>
+
+<body>
+	<img src="./img/tiger.jpg" class="img1">
+	<img src="./img/tiger.jpg" class="img2">
+	<img src="./img/tiger.jpg" class="img3">
+	<img src="./img/tiger.jpg" class="img4">
+	<img src="./img/tiger.jpg" class="img5">
+	<a href="javascript:;" class="a">
+		<img src="./img/tiger.jpg" class="img6">
+	</a>
+	<div class="img7"></div>
+</body>
+
+</html>
