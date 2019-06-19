@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1 {
+			width: 200px;
+			height: 100px;
+			background:
+				linear-gradient(to left bottom, transparent 50%, #000 0) no-repeat right top/calc(20 * 2px) calc(20 * 1.15473px),
+				linear-gradient(-150deg, transparent 20px, #58a 0);
+		}
+
+		.box2 {
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background: linear-gradient(-150deg, transparent 20px, #58a 0);
+		}
+
+		.box2::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			width: calc(20 * 2px);
+			height: calc(20 * 1.15473px);
+			background:
+				linear-gradient(to left bottom, transparent 50%, #000 0) no-repeat right top;
+
+		}
+		.box3 {
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background: linear-gradient(-150deg, transparent 20px, #58a 0);
+		}
+
+		.box3::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			height: calc(20 * 2px);
+			width: calc(20 * 1.15473px);
+			background:
+				linear-gradient(to left bottom, transparent 50%, #000 0) no-repeat right top;
+
+		}
+		.box4 {
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background: linear-gradient(-150deg, transparent 20px, #58a 0);
+		}
+
+		.box4::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			height: calc(20 * 2px);
+			width: calc(20 * 1.15473px);
+			border-bottom-left-radius: 8px;
+			box-shadow: -2px 2px 3px -1px rgba(0,0,0,.15);
+			background:
+				linear-gradient(to left bottom, transparent 50%, #000 0) no-repeat right top;
+			transform: translateY(-16.9054px) rotate(-30deg);
+			transform-origin: bottom right;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1"></div><br />
+	<div class="box2"></div><br />
+	<div class="box3"></div><br />
+	<div class="box4"></div><br />
+</body>
+
+</html>
