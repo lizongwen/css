@@ -33,8 +33,8 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 50%;
-			background-image: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3) 15%, transparent 0);
-			animation: rotate 4s linear infinite;
+			background:linear-gradient( 45deg,transparent 50%,#fff 100%) no-repeat left top/50% 50%;
+			animation: rotate2 4s linear infinite;
 			transform: rotate(0deg) scale(0.8)
 		}
 		.box3::after {
@@ -107,7 +107,7 @@
 		}
 		@keyframes rotate2{
 			to {
-				transform: rotate(-360deg) scale(0.8)
+				transform: rotate(360deg) scale(0.8)
 			}
 		}
 	</style>
