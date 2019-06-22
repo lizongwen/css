@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1 dt,.box1 dd{
+			display: inline;
+		}
+		.box1 dd + dt:before{
+			/*换行符A*/
+			content:'\A';
+			white-space: pre;
+		}
+		.box1 dd+dd:before{
+			content:', ';
+			font-weight:normal
+		}
+	</style>
+</head>
+<body>
+	<dl class="box1">
+		<dt>姓名</dt>
+		<dd>李宗文</dd>
+		<dt>性别</dt>
+		<dd>男</dd>
+		<dt>爱好</dt>
+		<dd>女</dd>
+		<dd>钱</dd>
+		<dt>年龄</dt>
+		<dd>20</dd>
+	</dl>
+</body>
+</html>
