@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		input[type='checkbox']{
+			position:absolute;
+			clip: rect(0,0,0,0)
+		}
+		input[type='checkbox']+label:before{
+			content:'';
+			display: inline-block;
+			width: .8em;
+			height:.8em;
+			margin-right: .2em;
+			background:silver;
+			/* line-height: .65 */
+		}
+		input[type='checkbox']:checked+label::before{
+			content:'\2713';
+			background:yellowgreen;
+			line-height: .45;
+			vertical-align: 3px;
+		}
+		input[type='checkbox']:disabled +label::before{
+			background: gray;
+			box-shadow:none;
+			color:#555
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" name="chk" id="chk">
+	<label for="chk">label</label>
+
+	<input type="checkbox" name="chk" id="chk1" checked>
+	<label for="chk1">label</label>
+
+	<input type="checkbox" name="chk" id="chk2" disabled>
+	<label for="chk2">label</label>
+
+</body>
+</html>

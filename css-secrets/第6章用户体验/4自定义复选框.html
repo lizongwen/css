@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		label{
+			user-select: none;
+		}
+		input[type='checkbox'] {
+			-webkit-appearance: none;
+			height: 14px;
+			width: 14px;
+			margin: 0;
+			border: 1px solid #d9d9d9;
+		}
+		input[type='checkbox']:checked{
+			background: #128bed url('./img/gou.png') no-repeat left;
+			border-color: #128bed;
+		}
+		input[type='checkbox']:focus,input[type='checkbox']:active{
+			outline:none;
+		}
+	</style>
+</head>
+
+<body>
+	<label for="chk">
+		<input type="checkbox" id="chk"> 下次自动登录
+	</label>
+</body>
+
+</html>
