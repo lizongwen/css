@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.ul1 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			/*顶部中间加径向渐变*/
+			background: radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%) no-repeat;
+			background-size: 100% 15px;
+		}
+
+		.ul2 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			/*顶部中间加径向渐变*/
+			background: radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%) no-repeat;
+			background-size: 100% 15px;
+			/*背景跟内容一起滚动*/
+			background-attachment: local;
+		}
+
+		.ul3 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			/*顶部中间加径向渐变*/
+			background:
+				/*顶部背景跟内容一起滚动*/
+				linear-gradient(#fff, #fff),
+				/*顶部背景相对内容固定*/
+				radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%);
+			background-size: 100% 15px;
+			background-repeat: no-repeat;
+			/*背景跟内容一起滚动*/
+			background-attachment: local, scroll;
+		}
+
+		.ul4 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			/*顶部中间加径向渐变*/
+			background:
+				/*顶部背景跟内容一起滚动,第二个颜色透明，就是白色到透明的线性渐变，颜色变化不会显得突兀*/
+				linear-gradient(#fff, hsla(0, 0%, 100%, 0)),
+				/*顶部背景相对内容固定*/
+				radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%);
+			background-size: 100% 15px;
+			background-repeat: no-repeat;
+			/*背景跟内容一起滚动*/
+			background-attachment: local, scroll;
+		}
+
+		.ul5 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			/*顶部中间加径向渐变*/
+			background:
+				/*顶部背景跟内容一起滚动,第二个颜色透明，就是白色到透明的线性渐变，颜色变化不会显得突兀*/
+				linear-gradient(#fff, hsla(0, 0%, 100%, 0)),
+				/*顶部背景相对内容固定*/
+				radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%);
+			/*线性渐变开始要完全遮住径向渐变，所有高度要大点*/
+			background-size: 100% 50px, 100% 15px;
+			background-repeat: no-repeat;
+			/*背景跟内容一起滚动*/
+			background-attachment: local, scroll;
+		}
+
+		.ul6 {
+			height: 8em;
+			width: 10em;
+			border: 1px solid silver;
+			padding: .3em .5em;
+			overflow: auto;
+			background:
+				linear-gradient(#fff 15px, hsla(0, 0%, 100%, 0)),
+				radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%),
+				linear-gradient(to top, #fff 15px, hsla(0, 0%, 100%, 0)),
+				radial-gradient(at bottom, rgba(0, 0, 0, .2), transparent 70%);
+			background-position:top,top, bottom,bottom;
+			background-size: 100% 50px,100% 15px;
+			background-repeat: no-repeat;
+			background-attachment: local, scroll;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="ul1">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<ul class="ul2">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<ul class="ul3">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<ul class="ul4">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<ul class="ul5">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<ul class="ul6">
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+</body>
+
+</html>
