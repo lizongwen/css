@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box1{
+			/*min-content取内部最大的不可断杭的元素宽度，这里是内部img元素的宽度400最大且不可断行*/
+			width:min-content;
+			margin: auto;
+		}
+		.box2{
+			margin: auto;
+			max-width: 400px;
+			max-width: min-content
+		}
+		.box2>img{
+			max-width: inherit
+		}
+	</style>
+</head>
+<body>
+	<figure class="box1">
+		<img src="./img/adamcatlace.jpg">
+		<figcaption>
+			The great Sir Adam Catlace was named after Countess Ada Lovelace, the first programmer ever.
+		</figcaption>
+	</figure>
+	<figure class="box2">
+			<img src="./img/adamcatlace.jpg">
+			<figcaption>
+				The great Sir Adam Catlace was named after Countess Ada Lovelace, the first programmer ever.
+			</figcaption>
+		</figure>
+</body>
+</html>

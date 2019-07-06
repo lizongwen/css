@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.table {
+			/*width大于单元格宽度合计，多出部分按比例分到各单元格，width小于等于单元格宽度合计，则宽度等于单元格宽度合计*/
+			width: 800px;
+			table-layout: fixed;
+			border:1px solid blue;
+			border-spacing: 0;
+			border-collapse: collapse
+		}
+		.table th,.table td{
+			border:1px solid blue;
+			padding:16px 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th style="width:80px">标题一</th>
+				<th style="width:90px">标题二二</th>
+				<th style="width:120px">标题三三三</th>
+				<th style="width:150px">标题四四四四</th>
+				<th style="width:230px">标题五五五五五</th>
+				<th style="width:300px">标题六六六六六六</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+			<tr>
+				<td>内容一一</td>
+				<td>内容二二二二</td>
+				<td>内容三三三三三三</td>
+				<td>内容四四四四四四四四</td>
+				<td>内容五五五五五五五五五五</td>
+				<td>内容六六六六六六六六六六六六</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
