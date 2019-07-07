@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		main {
+			background: grey;
+			position: relative;
+			width: 250px;
+			height: 300px;
+			margin-right: 5px;
+			overflow: auto;
+		}
+
+		div {
+			background: sandybrown
+		}
+
+		.box1 {
+			position: absolute;
+			width: 100px;
+			height: 120px;
+			top: calc(50% - 60px);
+			left: calc(50% - 50px);
+		}
+
+		.box2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="box1"></div>
+	</main><br>
+	<main>
+		<div class="box2">宽高不确定的居中</div>
+	</main><br>
+	
+</body>
+
+</html>
