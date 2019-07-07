@@ -10,7 +10,8 @@
 		*{
 			box-sizing: border-box;
 		}
-		/*background-position的值位置是指相对于盒子左上角的位置*/
+		/*background-position的值如果是长度单位则位置是指相对于盒子左上角的位置偏移量，如果是百分比则是只图片的百分比对应点与盒子百分比对应点重合*/
+		/*如果是关键字则left图像左边与盒子左边对齐，right图像右边与盒子右边对齐，top图像顶部与盒子顶部对齐，bottom图像底部与盒子底部对齐；center表示图像在水平和垂直方向的中心与盒子在水平和垂直方向的中心对齐*/
 		.box1 {
 			width: 200px;
 			height: 200px;

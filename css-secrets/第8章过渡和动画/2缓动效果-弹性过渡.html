@@ -23,7 +23,6 @@
 		}
 
 		/* 弹性过渡-animation动画实现 */
-
 		#username1:not(:focus)+.callout1 {
 			transform: scale(0);
 		}
@@ -44,6 +43,7 @@
 			from {
 				transform: scale(0);
 			}
+
 			70% {
 				transform: scale(1.1);
 				animation-timing-function: cubic-bezier(.1, .25, 1, .25);
@@ -51,13 +51,12 @@
 		}
 
 		/* 弹性过渡-transition实现 */
-
 		#username2:not(:focus)+.callout2 {
 			transform: scale(0);
-			/* transition-timing-function:ease;
+			transition-timing-function:ease;
 			transition-duration:.25s;
-			transition-property:transform; */
-			transition: transform .25s
+			transition-property:transform;
+			/* transition: transform .25s */
 		}
 
 		.callout2 {
