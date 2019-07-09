@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box{
+			margin: 0 auto;
+			width: 0;
+		}
+		.box1{
+			width: 0;
+			margin: 0 auto;
+			direction: rtl;
+		}
+		.inner{
+			display: block;
+			outline: 1px solid red;
+		}
+		.inner1{
+			display: inline-block;
+			outline: 1px solid red;
+		}
+		.inner2{
+			display: inline;
+			outline: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"><div class="inner">aaaa 凹 aaaa</div></div><br>
+	<div class="box1"><div class="inner">凹 aaaa 凹</div></div><br>
+	<div class="box"><div class="inner1">aaaa 凹 aaaa</div></div><br>
+	<div class="box1"><div class="inner1">凹 aaaa 凹</div></div><br>
+	<div class="box"><div class="inner2">aaaa 凹 aaaa</div></div><br>
+	<div class="box1"><div class="inner2">凹 aaaa 凹</div></div>
+</body>
+</html>
