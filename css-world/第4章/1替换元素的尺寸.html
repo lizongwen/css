@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.img{
+			width: 128px;
+		}
+	</style>
+</head>
+<body>
+	<!-- img元素尺寸由图片固有宽高决定 -->
+	<img src="./img/1.jpg">
+	<br>
+	<!-- img元素尺寸由html宽高属性决定，只定义其中一项，另外一项同比例变化 -->
+	<img src="./img/1.jpg" width="256">
+	<br>
+	<!-- img元素尺寸由CSS宽高属性决定，只定义其中一项，另外一项同比例变化 -->
+	<img class="img" src="./img/1.jpg" >
+	<br>
+	<!-- 替换元素尺寸未找到固有尺寸，HTML尺寸或者CSS尺寸，默认300*150,img例外 -->
+	<video></video>
+	<br>
+	<img src="">
+</body>
+</html>
