@@ -23,11 +23,11 @@
 		.test ol {
 			margin: 16px 0;
 			padding: 0;
-			list-style: none;
+			/* list-style: none; */
 		}
 
 		.counter1 li {
-			counter-increment: testname;
+			counter-increment: testname 1;
 		}
 
 		.counter1 li:before {
@@ -66,7 +66,7 @@
 		}
 
 		.counter3 li li:before {
-			content: counter(testname3, decimal)"."counter(testname4, decimal)".";
+			content: counter(testname3, decimal)"."counter(testname4, cjk-ideographic)".";
 		}
 
 		.counter3 li li li {
@@ -74,13 +74,14 @@
 		}
 
 		.counter3 li li li:before {
-			content: counter(testname3, decimal)"."counter(testname4, decimal)"."counter(testname5, decimal)".";
+			content: counter(testname3, decimal)"."counter(testname4, cjk-ideographic)"."counter(testname5, lower-alpha)".";
 		}
 	</style>
 </head>
 
 <body>
-	<ul class="test">
+	------------------------------------ol----------------------------------------------
+	<ol class="test">
 		<li class="string">
 			<strong>string：</strong>
 			<p>你的浏览器是否支持content属性：否</p>
@@ -125,17 +126,96 @@
 				</li>
 				<li>列表项
 					<ol>
-						<li>列表项</li>
+						<li>列表项
+							<ol>
+								<li>列表项</li>
+								<li>列表项</li>
+							</ol>
+						</li>
 						<li>列表项</li>
 					</ol>
 				</li>
 				<li>列表项
 					<ol>
-						<li>列表项</li>
+						<li>列表项
+							<ol>
+								<li>列表项</li>
+								<li>列表项</li>
+							</ol>
+						</li>
 						<li>列表项</li>
 					</ol>
 				</li>
 			</ol>
+		</li>
+	</ol>
+	------------------------------------ul----------------------------------------------
+	<ul class="test">
+		<li class="string">
+			<strong>string：</strong>
+			<p>你的浏览器是否支持content属性：否</p>
+		</li>
+		<li class="attr">
+			<strong>attr：</strong>
+			<p title="如果你看到我则说明你目前使用的浏览器支持content属性"></p>
+		</li>
+		<li class="url">
+			<strong>url()：</strong>
+			<p>如果你看到文字前面的图标则说明你目前使用的浏览器支持content属性</p>
+		</li>
+		<li class="counter1">
+			<strong>counter(name)：</strong>
+			<ul>
+				<li>列表项</li>
+				<li>列表项</li>
+				<li>列表项</li>
+			</ul>
+		</li>
+		<li class="counter2">
+			<strong>counter(name,list-style-type)：</strong>
+			<ul>
+				<li>列表项</li>
+				<li>列表项</li>
+				<li>列表项</li>
+			</ul>
+		</li>
+		<li class="counter3">
+			<strong>counter(name)拓展应用：</strong>
+			<ul>
+				<li>列表项
+					<ul>
+						<li>列表项
+							<ul>
+								<li>列表项</li>
+								<li>列表项</li>
+							</ul>
+						</li>
+						<li>列表项</li>
+					</ul>
+				</li>
+				<li>列表项
+					<ul>
+						<li>列表项
+							<ul>
+								<li>列表项</li>
+								<li>列表项</li>
+							</ul>
+						</li>
+						<li>列表项</li>
+					</ul>
+				</li>
+				<li>列表项
+					<ul>
+						<li>列表项
+							<ul>
+								<li>列表项</li>
+								<li>列表项</li>
+							</ul>
+						</li>
+						<li>列表项</li>
+					</ul>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </body>
