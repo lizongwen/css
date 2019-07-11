@@ -8,7 +8,7 @@
 		.test ol {
 			margin: 16px 0;
 			padding: 0;
-			list-style: none;
+			/* list-style: none; */
 		}
 
 		.test li li:before {
@@ -17,16 +17,16 @@
 		}
 
 		.counter1 li {
-			counter-increment: testname;
+			counter-increment: testname 1;
 		}
 
 		.counter1 li:before {
 			content: counter(testname)".";
-			counter-reset: testname;
+			counter-reset: testname 0;
 		}
 
 		.counter2 li {
-			counter-increment: testname2;
+			counter-increment: testname2 2;
 		}
 
 		.counter2 li:before {
@@ -35,7 +35,7 @@
 		}
 
 		.counter3 li {
-			counter-increment: testname3;
+			counter-increment: testname3 1;
 		}
 
 		.counter3 li:before {
