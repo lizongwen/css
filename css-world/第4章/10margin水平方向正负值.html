@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box {
+			margin: 0 auto;
+			width: 300px;
+			height: 50px;
+			background: red;
+		}
+
+		.inner1 {
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+		}
+
+		.inner2 {
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-left: 20px;
+		}
+
+		.inner3 {
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-right: 20px;
+		}
+
+		.inner4 {
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			/*width未给定，margin负值，影响width大小*/
+			margin-left: -20px;
+		}
+
+		.inner5 {
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-right: -20px;
+		}
+
+		.inner6 {
+			display: inline-block;
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-left: 20px;
+			width: 100%;
+		}
+
+		.inner7 {
+			display: inline-block;
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-right: 20px;
+			width: 100%;
+		}
+
+		.inner8 {
+			display: inline-block;
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-left: -20px;
+			width: 100%;
+		}
+
+		.inner9 {
+			display: inline-block;
+			height: 50%;
+			background: rgba(0, 140, 250, .5);
+			margin-right: -20px;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="inner1"></div>
+	</div>
+	<br>
+	<div class="box">
+		<div class="inner2"></div>
+	</div>
+	<br>
+	<div class="box">
+		<div class="inner3"></div>
+	</div>
+	<br>
+	<div class="box">
+		<div class="inner4"></div>
+	</div>
+	<br>
+	<div class="box">
+		<div class="inner5"></div>
+	</div>
+	<br>
+	<div class="box" style="font-size: 0">
+		<div class="inner6"></div>
+		<div style="display:inline-block;width:20px;height: 50%;background: lawngreen;"></div>
+	</div>
+	<br>
+	<div class="box" style="font-size: 0">
+		<div class="inner7"></div>
+		<div style="display:inline-block;width:20px;height: 50%;background: lawngreen;"></div>
+	</div>
+	<br>
+	<div class="box" style="font-size: 0">
+		<div class="inner8"></div>
+		<div style="display:inline-block;width:20px;height: 50%;background: lawngreen;"></div>
+	</div>
+	<br>
+	<div class="box" style="font-size: 0">
+		<div class="inner9"></div>
+		<div style="display:inline-block;width:20px;height: 50%;background: lawngreen;"></div>
+	</div>
+	<br>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.main {
+			padding: 50px;
+		}
+
+		.main::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.box {
+			width: 50px;
+			height: 280px;
+			background: red;
+			float: left;
+			margin-right: 2px;
+		}
+
+		.inner1 {
+			margin-top: 20px;
+		}
+
+		.inner2 {
+			margin-top: -20px;
+		}
+
+		.inner3 {
+			margin-bottom: 20px;
+		}
+
+		.inner4 {
+			margin-bottom: -20px;
+		}
+
+		.inner5 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.inner6 {
+			margin-top: -20px;
+			margin-bottom: -20px;
+		}
+
+		.inner7 {
+			height: 100%;
+			margin-top: 20px;
+			background: rgba(23, 54, 145, .7)
+		}
+
+		.inner8 {
+			height: 100%;
+			margin-top: -20px;
+			background: rgba(23, 54, 145, .7)
+		}
+
+		.inner9 {
+			height: 100%;
+			margin-bottom: 20px;
+			background: rgba(23, 54, 145, .7)
+		}
+
+		.inner10 {
+			height: 100%;
+			margin-bottom: -20px;
+			background: rgba(23, 54, 145, .7)
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner1">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+		</div>
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner2">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+		</div>
+		<div class="box">
+			<div class="inner3">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+		<div class="box">
+			<div class="inner4">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner5">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner6">中文中文中文中文中文中文中文中文中文中文中文中文中文</div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner7"></div>
+		</div>
+		<div class="box">
+			<div style="height:10px;background: lawngreen"></div>
+			<div class="inner8"></div>
+		</div>
+		<div class="box">
+			<div class="inner9"></div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+		<div class="box">
+			<div class="inner10"></div>
+			<div style="height:10px;background: lawngreen"></div>
+		</div>
+	</div>
+</body>
+
+</html>
