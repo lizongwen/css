@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			color: red;
+			border: solid;
+			transition: color .5s;
+		}
+
+		.box:before,
+		.box:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+		}
+
+		.box:before {
+			width: 20px;
+			border-top: solid;
+		}
+
+		.box:after {
+			height: 20px;
+			border-left: solid;
+		}
+
+		.box:hover {
+			color: cadetblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+
+</html>
