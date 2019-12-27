@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+            filter: blur(2px) contrast(25);
+        }
+
+        .g-btn {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 130px auto;
+            cursor: pointer;
+        }
+
+        .g-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #dc8165;
+            border-radius: 48% 45% 48% 46%;
+            animation: rotate 5s infinite linear;
+            z-index: 0;
+        }
+
+        .g-btn::after {
+            content: "Hover";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            line-height: 200px;
+            text-align: center;
+            color: #000;
+            font-size: 48px;
+        }
+
+        .g-ball {
+            position: absolute;
+            top: 50px;
+            transform: translate(0, 0);
+            background: #fa8763;
+            border-radius: 50%;
+            z-index: -1;
+            mix-blend-mode: screen;
+        }
+
+        .g-ball:nth-child(0) {
+            width: 53px;
+            height: 53px;
+            left: calc(24px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(0) {
+            animation: movetop 0.6s linear 0.672s;
+        }
+
+        .g-ball:nth-child(1) {
+            width: 50px;
+            height: 50px;
+            left: calc(55px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(1) {
+            animation: movetop 0.6s linear 1.087s;
+        }
+
+        .g-ball:nth-child(2) {
+            width: 44px;
+            height: 44px;
+            left: calc(62px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(2) {
+            animation: movetop 0.6s linear 0.495s;
+        }
+
+        .g-ball:nth-child(3) {
+            width: 24px;
+            height: 24px;
+            left: calc(46px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(3) {
+            animation: movetop 0.6s linear 1.112s;
+        }
+
+        .g-ball:nth-child(4) {
+            width: 42px;
+            height: 42px;
+            left: calc(94px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(4) {
+            animation: movetop 0.6s linear 0.973s;
+        }
+
+        .g-ball:nth-child(5) {
+            width: 17px;
+            height: 17px;
+            left: calc(61px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(5) {
+            animation: movetop 0.6s linear 0.857s;
+        }
+
+        .g-ball:nth-child(6) {
+            width: 7px;
+            height: 7px;
+            left: calc(100px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(6) {
+            animation: movetop 0.6s linear 1.273s;
+        }
+
+        .g-ball:nth-child(7) {
+            width: 24px;
+            height: 24px;
+            left: calc(15px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(7) {
+            animation: movetop 0.6s linear 1.576s;
+        }
+
+        .g-ball:nth-child(8) {
+            width: 14px;
+            height: 14px;
+            left: calc(22px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(8) {
+            animation: movetop 0.6s linear 1.68s;
+        }
+
+        .g-ball:nth-child(9) {
+            width: 24px;
+            height: 24px;
+            left: calc(49px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(9) {
+            animation: movetop 0.6s linear 0.867s;
+        }
+
+        .g-ball:nth-child(10) {
+            width: 34px;
+            height: 34px;
+            left: calc(56px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(10) {
+            animation: movetop 0.6s linear 0.431s;
+        }
+
+        .g-ball:nth-child(11) {
+            width: 6px;
+            height: 6px;
+            left: calc(43px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(11) {
+            animation: movetop 0.6s linear 0.617s;
+        }
+
+        .g-ball:nth-child(12) {
+            width: 18px;
+            height: 18px;
+            left: calc(79px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(12) {
+            animation: movetop 0.6s linear 0.477s;
+        }
+
+        .g-ball:nth-child(13) {
+            width: 23px;
+            height: 23px;
+            left: calc(41px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(13) {
+            animation: movetop 0.6s linear 0.182s;
+        }
+
+        .g-ball:nth-child(14) {
+            width: 49px;
+            height: 49px;
+            left: calc(46px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(14) {
+            animation: movetop 0.6s linear 1.083s;
+        }
+
+        .g-ball:nth-child(15) {
+            width: 2px;
+            height: 2px;
+            left: calc(98px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(15) {
+            animation: movetop 0.6s linear 1.375s;
+        }
+
+        .g-ball:nth-child(16) {
+            width: 60px;
+            height: 60px;
+            left: calc(42px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(16) {
+            animation: movetop 0.6s linear 1.32s;
+        }
+
+        .g-ball:nth-child(17) {
+            width: 19px;
+            height: 19px;
+            left: calc(33px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(17) {
+            animation: movetop 0.6s linear 0.342s;
+        }
+
+        .g-ball:nth-child(18) {
+            width: 56px;
+            height: 56px;
+            left: calc(49px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(18) {
+            animation: movetop 0.6s linear 0.188s;
+        }
+
+        .g-ball:nth-child(19) {
+            width: 60px;
+            height: 60px;
+            left: calc(98px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(19) {
+            animation: movetop 0.6s linear 0.398s;
+        }
+
+        .g-ball:nth-child(20) {
+            width: 47px;
+            height: 47px;
+            left: calc(69px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(20) {
+            animation: movetop 0.6s linear 0.836s;
+        }
+
+        .g-ball:nth-child(21) {
+            width: 26px;
+            height: 26px;
+            left: calc(81px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(21) {
+            animation: movetop 0.6s linear 1.78s;
+        }
+
+        .g-ball:nth-child(22) {
+            width: 11px;
+            height: 11px;
+            left: calc(63px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(22) {
+            animation: movetop 0.6s linear 0.022s;
+        }
+
+        .g-ball:nth-child(23) {
+            width: 51px;
+            height: 51px;
+            left: calc(30px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(23) {
+            animation: movetop 0.6s linear 0.697s;
+        }
+
+        .g-ball:nth-child(24) {
+            width: 15px;
+            height: 15px;
+            left: calc(9px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(24) {
+            animation: movetop 0.6s linear 0.481s;
+        }
+
+        .g-ball:nth-child(25) {
+            width: 1px;
+            height: 1px;
+            left: calc(56px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(25) {
+            animation: movetop 0.6s linear 1.264s;
+        }
+
+        .g-ball:nth-child(26) {
+            width: 38px;
+            height: 38px;
+            left: calc(52px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(26) {
+            animation: movetop 0.6s linear 1.811s;
+        }
+
+        .g-ball:nth-child(27) {
+            width: 56px;
+            height: 56px;
+            left: calc(68px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(27) {
+            animation: movetop 0.6s linear 0.11s;
+        }
+
+        .g-ball:nth-child(28) {
+            width: 29px;
+            height: 29px;
+            left: calc(40px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(28) {
+            animation: movetop 0.6s linear 0.816s;
+        }
+
+        .g-ball:nth-child(29) {
+            width: 46px;
+            height: 46px;
+            left: calc(57px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(29) {
+            animation: movetop 0.6s linear 0.336s;
+        }
+
+        .g-ball:nth-child(30) {
+            width: 5px;
+            height: 5px;
+            left: calc(45px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(30) {
+            animation: movetop 0.6s linear 0.373s;
+        }
+
+        .g-ball:nth-child(31) {
+            width: 51px;
+            height: 51px;
+            left: calc(59px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(31) {
+            animation: movetop 0.6s linear 1.254s;
+        }
+
+        .g-ball:nth-child(32) {
+            width: 53px;
+            height: 53px;
+            left: calc(59px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(32) {
+            animation: movetop 0.6s linear 0.268s;
+        }
+
+        .g-ball:nth-child(33) {
+            width: 1px;
+            height: 1px;
+            left: calc(100px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(33) {
+            animation: movetop 0.6s linear 0.947s;
+        }
+
+        .g-ball:nth-child(34) {
+            width: 50px;
+            height: 50px;
+            left: calc(50px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(34) {
+            animation: movetop 0.6s linear 1.9s;
+        }
+
+        .g-ball:nth-child(35) {
+            width: 11px;
+            height: 11px;
+            left: calc(29px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(35) {
+            animation: movetop 0.6s linear 0.132s;
+        }
+
+        .g-ball:nth-child(36) {
+            width: 55px;
+            height: 55px;
+            left: calc(1px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(36) {
+            animation: movetop 0.6s linear 0.922s;
+        }
+
+        .g-ball:nth-child(37) {
+            width: 14px;
+            height: 14px;
+            left: calc(4px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(37) {
+            animation: movetop 0.6s linear 1.785s;
+        }
+
+        .g-ball:nth-child(38) {
+            width: 4px;
+            height: 4px;
+            left: calc(1px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(38) {
+            animation: movetop 0.6s linear 1.502s;
+        }
+
+        .g-ball:nth-child(39) {
+            width: 16px;
+            height: 16px;
+            left: calc(98px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(39) {
+            animation: movetop 0.6s linear 1.989s;
+        }
+
+        .g-ball:nth-child(40) {
+            width: 59px;
+            height: 59px;
+            left: calc(66px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(40) {
+            animation: movetop 0.6s linear 0.737s;
+        }
+
+        .g-ball:nth-child(41) {
+            width: 44px;
+            height: 44px;
+            left: calc(91px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(41) {
+            animation: movetop 0.6s linear 0.84s;
+        }
+
+        .g-ball:nth-child(42) {
+            width: 15px;
+            height: 15px;
+            left: calc(37px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(42) {
+            animation: movetop 0.6s linear 1.311s;
+        }
+
+        .g-ball:nth-child(43) {
+            width: 55px;
+            height: 55px;
+            left: calc(56px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(43) {
+            animation: movetop 0.6s linear 0.835s;
+        }
+
+        .g-ball:nth-child(44) {
+            width: 47px;
+            height: 47px;
+            left: calc(70px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(44) {
+            animation: movetop 0.6s linear 0.999s;
+        }
+
+        .g-ball:nth-child(45) {
+            width: 32px;
+            height: 32px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(45) {
+            animation: movetop 0.6s linear 1.07s;
+        }
+
+        .g-ball:nth-child(46) {
+            width: 17px;
+            height: 17px;
+            left: calc(73px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(46) {
+            animation: movetop 0.6s linear 1.226s;
+        }
+
+        .g-ball:nth-child(47) {
+            width: 20px;
+            height: 20px;
+            left: calc(73px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(47) {
+            animation: movetop 0.6s linear 1.898s;
+        }
+
+        .g-ball:nth-child(48) {
+            width: 2px;
+            height: 2px;
+            left: calc(28px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(48) {
+            animation: movetop 0.6s linear 1.392s;
+        }
+
+        .g-ball:nth-child(49) {
+            width: 11px;
+            height: 11px;
+            left: calc(37px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(49) {
+            animation: movetop 0.6s linear 0.563s;
+        }
+
+        .g-ball:nth-child(50) {
+            width: 40px;
+            height: 40px;
+            left: calc(56px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(50) {
+            animation: movetop 0.6s linear 0.642s;
+        }
+
+        .g-ball:nth-child(51) {
+            width: 44px;
+            height: 44px;
+            left: calc(70px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(51) {
+            animation: movetop 0.6s linear 0.167s;
+        }
+
+        .g-ball:nth-child(52) {
+            width: 5px;
+            height: 5px;
+            left: calc(82px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(52) {
+            animation: movetop 0.6s linear 0.591s;
+        }
+
+        .g-ball:nth-child(53) {
+            width: 60px;
+            height: 60px;
+            left: calc(11px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(53) {
+            animation: movetop 0.6s linear 0.373s;
+        }
+
+        .g-ball:nth-child(54) {
+            width: 50px;
+            height: 50px;
+            left: calc(21px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(54) {
+            animation: movetop 0.6s linear 1.842s;
+        }
+
+        .g-ball:nth-child(55) {
+            width: 3px;
+            height: 3px;
+            left: calc(65px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(55) {
+            animation: movetop 0.6s linear 1.742s;
+        }
+
+        .g-ball:nth-child(56) {
+            width: 27px;
+            height: 27px;
+            left: calc(62px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(56) {
+            animation: movetop 0.6s linear 1.503s;
+        }
+
+        .g-ball:nth-child(57) {
+            width: 14px;
+            height: 14px;
+            left: calc(66px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(57) {
+            animation: movetop 0.6s linear 0.1s;
+        }
+
+        .g-ball:nth-child(58) {
+            width: 15px;
+            height: 15px;
+            left: calc(22px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(58) {
+            animation: movetop 0.6s linear 0.895s;
+        }
+
+        .g-ball:nth-child(59) {
+            width: 35px;
+            height: 35px;
+            left: calc(21px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(59) {
+            animation: movetop 0.6s linear 1.28s;
+        }
+
+        .g-ball:nth-child(60) {
+            width: 49px;
+            height: 49px;
+            left: calc(14px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(60) {
+            animation: movetop 0.6s linear 0.931s;
+        }
+
+        .g-ball:nth-child(61) {
+            width: 48px;
+            height: 48px;
+            left: calc(71px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(61) {
+            animation: movetop 0.6s linear 0.7s;
+        }
+
+        .g-ball:nth-child(62) {
+            width: 21px;
+            height: 21px;
+            left: calc(21px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(62) {
+            animation: movetop 0.6s linear 1.71s;
+        }
+
+        .g-ball:nth-child(63) {
+            width: 44px;
+            height: 44px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(63) {
+            animation: movetop 0.6s linear 0.946s;
+        }
+
+        .g-ball:nth-child(64) {
+            width: 39px;
+            height: 39px;
+            left: calc(30px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(64) {
+            animation: movetop 0.6s linear 1.635s;
+        }
+
+        .g-ball:nth-child(65) {
+            width: 40px;
+            height: 40px;
+            left: calc(69px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(65) {
+            animation: movetop 0.6s linear 0.778s;
+        }
+
+        .g-ball:nth-child(66) {
+            width: 6px;
+            height: 6px;
+            left: calc(10px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(66) {
+            animation: movetop 0.6s linear 1.263s;
+        }
+
+        .g-ball:nth-child(67) {
+            width: 1px;
+            height: 1px;
+            left: calc(24px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(67) {
+            animation: movetop 0.6s linear 0.139s;
+        }
+
+        .g-ball:nth-child(68) {
+            width: 15px;
+            height: 15px;
+            left: calc(39px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(68) {
+            animation: movetop 0.6s linear 1.56s;
+        }
+
+        .g-ball:nth-child(69) {
+            width: 57px;
+            height: 57px;
+            left: calc(99px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(69) {
+            animation: movetop 0.6s linear 1.095s;
+        }
+
+        .g-ball:nth-child(70) {
+            width: 10px;
+            height: 10px;
+            left: calc(78px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(70) {
+            animation: movetop 0.6s linear 1.761s;
+        }
+
+        .g-ball:nth-child(71) {
+            width: 21px;
+            height: 21px;
+            left: calc(24px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(71) {
+            animation: movetop 0.6s linear 0.326s;
+        }
+
+        .g-ball:nth-child(72) {
+            width: 32px;
+            height: 32px;
+            left: calc(35px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(72) {
+            animation: movetop 0.6s linear 1.565s;
+        }
+
+        .g-ball:nth-child(73) {
+            width: 60px;
+            height: 60px;
+            left: calc(49px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(73) {
+            animation: movetop 0.6s linear 1.989s;
+        }
+
+        .g-ball:nth-child(74) {
+            width: 37px;
+            height: 37px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(74) {
+            animation: movetop 0.6s linear 1.948s;
+        }
+
+        .g-ball:nth-child(75) {
+            width: 18px;
+            height: 18px;
+            left: calc(74px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(75) {
+            animation: movetop 0.6s linear 1.731s;
+        }
+
+        .g-ball:nth-child(76) {
+            width: 45px;
+            height: 45px;
+            left: calc(28px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(76) {
+            animation: movetop 0.6s linear 1.005s;
+        }
+
+        .g-ball:nth-child(77) {
+            width: 54px;
+            height: 54px;
+            left: calc(45px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(77) {
+            animation: movetop 0.6s linear 0.376s;
+        }
+
+        .g-ball:nth-child(78) {
+            width: 1px;
+            height: 1px;
+            left: calc(79px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(78) {
+            animation: movetop 0.6s linear 0.953s;
+        }
+
+        .g-ball:nth-child(79) {
+            width: 41px;
+            height: 41px;
+            left: calc(22px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(79) {
+            animation: movetop 0.6s linear 0.747s;
+        }
+
+        .g-ball:nth-child(80) {
+            width: 56px;
+            height: 56px;
+            left: calc(51px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(80) {
+            animation: movetop 0.6s linear 0.879s;
+        }
+
+        .g-ball:nth-child(81) {
+            width: 54px;
+            height: 54px;
+            left: calc(30px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(81) {
+            animation: movetop 0.6s linear 0.953s;
+        }
+
+        .g-ball:nth-child(82) {
+            width: 56px;
+            height: 56px;
+            left: calc(5px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(82) {
+            animation: movetop 0.6s linear 1.87s;
+        }
+
+        .g-ball:nth-child(83) {
+            width: 60px;
+            height: 60px;
+            left: calc(14px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(83) {
+            animation: movetop 0.6s linear 1.309s;
+        }
+
+        .g-ball:nth-child(84) {
+            width: 31px;
+            height: 31px;
+            left: calc(74px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(84) {
+            animation: movetop 0.6s linear 1.88s;
+        }
+
+        .g-ball:nth-child(85) {
+            width: 30px;
+            height: 30px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(85) {
+            animation: movetop 0.6s linear 0.455s;
+        }
+
+        .g-ball:nth-child(86) {
+            width: 51px;
+            height: 51px;
+            left: calc(32px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(86) {
+            animation: movetop 0.6s linear 0.892s;
+        }
+
+        .g-ball:nth-child(87) {
+            width: 59px;
+            height: 59px;
+            left: calc(58px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(87) {
+            animation: movetop 0.6s linear 0.047s;
+        }
+
+        .g-ball:nth-child(88) {
+            width: 13px;
+            height: 13px;
+            left: calc(55px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(88) {
+            animation: movetop 0.6s linear 1.533s;
+        }
+
+        .g-ball:nth-child(89) {
+            width: 56px;
+            height: 56px;
+            left: calc(1px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(89) {
+            animation: movetop 0.6s linear 1.304s;
+        }
+
+        .g-ball:nth-child(90) {
+            width: 12px;
+            height: 12px;
+            left: calc(100px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(90) {
+            animation: movetop 0.6s linear 0.219s;
+        }
+
+        .g-ball:nth-child(91) {
+            width: 6px;
+            height: 6px;
+            left: calc(21px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(91) {
+            animation: movetop 0.6s linear 0.568s;
+        }
+
+        .g-ball:nth-child(92) {
+            width: 21px;
+            height: 21px;
+            left: calc(94px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(92) {
+            animation: movetop 0.6s linear 0.261s;
+        }
+
+        .g-ball:nth-child(93) {
+            width: 38px;
+            height: 38px;
+            left: calc(50px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(93) {
+            animation: movetop 0.6s linear 0.891s;
+        }
+
+        .g-ball:nth-child(94) {
+            width: 59px;
+            height: 59px;
+            left: calc(2px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(94) {
+            animation: movetop 0.6s linear 0.989s;
+        }
+
+        .g-ball:nth-child(95) {
+            width: 33px;
+            height: 33px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(95) {
+            animation: movetop 0.6s linear 0.479s;
+        }
+
+        .g-ball:nth-child(96) {
+            width: 8px;
+            height: 8px;
+            left: calc(25px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(96) {
+            animation: movetop 0.6s linear 1.427s;
+        }
+
+        .g-ball:nth-child(97) {
+            width: 26px;
+            height: 26px;
+            left: calc(99px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(97) {
+            animation: movetop 0.6s linear 1.371s;
+        }
+
+        .g-ball:nth-child(98) {
+            width: 23px;
+            height: 23px;
+            left: calc(53px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(98) {
+            animation: movetop 0.6s linear 1.926s;
+        }
+
+        .g-ball:nth-child(99) {
+            width: 35px;
+            height: 35px;
+            left: calc(67px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(99) {
+            animation: movetop 0.6s linear 1.869s;
+        }
+
+        .g-ball:nth-child(100) {
+            width: 50px;
+            height: 50px;
+            left: calc(6px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(100) {
+            animation: movetop 0.6s linear 0.449s;
+        }
+
+        .g-ball:nth-child(101) {
+            width: 60px;
+            height: 60px;
+            left: calc(62px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(101) {
+            animation: movetop 0.6s linear 0.397s;
+        }
+
+        .g-ball:nth-child(102) {
+            width: 57px;
+            height: 57px;
+            left: calc(90px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(102) {
+            animation: movetop 0.6s linear 1.781s;
+        }
+
+        .g-ball:nth-child(103) {
+            width: 52px;
+            height: 52px;
+            left: calc(3px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(103) {
+            animation: movetop 0.6s linear 1.909s;
+        }
+
+        .g-ball:nth-child(104) {
+            width: 25px;
+            height: 25px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(104) {
+            animation: movetop 0.6s linear 0.117s;
+        }
+
+        .g-ball:nth-child(105) {
+            width: 26px;
+            height: 26px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(105) {
+            animation: movetop 0.6s linear 0.387s;
+        }
+
+        .g-ball:nth-child(106) {
+            width: 54px;
+            height: 54px;
+            left: calc(19px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(106) {
+            animation: movetop 0.6s linear 0.02s;
+        }
+
+        .g-ball:nth-child(107) {
+            width: 23px;
+            height: 23px;
+            left: calc(86px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(107) {
+            animation: movetop 0.6s linear 0.06s;
+        }
+
+        .g-ball:nth-child(108) {
+            width: 21px;
+            height: 21px;
+            left: calc(67px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(108) {
+            animation: movetop 0.6s linear 0.155s;
+        }
+
+        .g-ball:nth-child(109) {
+            width: 22px;
+            height: 22px;
+            left: calc(2px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(109) {
+            animation: movetop 0.6s linear 0.132s;
+        }
+
+        .g-ball:nth-child(110) {
+            width: 51px;
+            height: 51px;
+            left: calc(85px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(110) {
+            animation: movetop 0.6s linear 1.89s;
+        }
+
+        .g-ball:nth-child(111) {
+            width: 10px;
+            height: 10px;
+            left: calc(14px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(111) {
+            animation: movetop 0.6s linear 0.415s;
+        }
+
+        .g-ball:nth-child(112) {
+            width: 29px;
+            height: 29px;
+            left: calc(35px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(112) {
+            animation: movetop 0.6s linear 0.898s;
+        }
+
+        .g-ball:nth-child(113) {
+            width: 34px;
+            height: 34px;
+            left: calc(55px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(113) {
+            animation: movetop 0.6s linear 1.127s;
+        }
+
+        .g-ball:nth-child(114) {
+            width: 35px;
+            height: 35px;
+            left: calc(64px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(114) {
+            animation: movetop 0.6s linear 1.071s;
+        }
+
+        .g-ball:nth-child(115) {
+            width: 20px;
+            height: 20px;
+            left: calc(25px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(115) {
+            animation: movetop 0.6s linear 1.427s;
+        }
+
+        .g-ball:nth-child(116) {
+            width: 60px;
+            height: 60px;
+            left: calc(39px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(116) {
+            animation: movetop 0.6s linear 0.871s;
+        }
+
+        .g-ball:nth-child(117) {
+            width: 25px;
+            height: 25px;
+            left: calc(99px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(117) {
+            animation: movetop 0.6s linear 0.832s;
+        }
+
+        .g-ball:nth-child(118) {
+            width: 30px;
+            height: 30px;
+            left: calc(37px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(118) {
+            animation: movetop 0.6s linear 0.683s;
+        }
+
+        .g-ball:nth-child(119) {
+            width: 26px;
+            height: 26px;
+            left: calc(12px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(119) {
+            animation: movetop 0.6s linear 0.394s;
+        }
+
+        .g-ball:nth-child(120) {
+            width: 2px;
+            height: 2px;
+            left: calc(99px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(120) {
+            animation: movetop 0.6s linear 0.991s;
+        }
+
+        .g-ball:nth-child(121) {
+            width: 38px;
+            height: 38px;
+            left: calc(67px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(121) {
+            animation: movetop 0.6s linear 1.349s;
+        }
+
+        .g-ball:nth-child(122) {
+            width: 45px;
+            height: 45px;
+            left: calc(79px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(122) {
+            animation: movetop 0.6s linear 1.668s;
+        }
+
+        .g-ball:nth-child(123) {
+            width: 29px;
+            height: 29px;
+            left: calc(55px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(123) {
+            animation: movetop 0.6s linear 1.363s;
+        }
+
+        .g-ball:nth-child(124) {
+            width: 47px;
+            height: 47px;
+            left: calc(12px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(124) {
+            animation: movetop 0.6s linear 1.129s;
+        }
+
+        .g-ball:nth-child(125) {
+            width: 16px;
+            height: 16px;
+            left: calc(24px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(125) {
+            animation: movetop 0.6s linear 0.129s;
+        }
+
+        .g-ball:nth-child(126) {
+            width: 11px;
+            height: 11px;
+            left: calc(97px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(126) {
+            animation: movetop 0.6s linear 0.905s;
+        }
+
+        .g-ball:nth-child(127) {
+            width: 9px;
+            height: 9px;
+            left: calc(52px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(127) {
+            animation: movetop 0.6s linear 0.478s;
+        }
+
+        .g-ball:nth-child(128) {
+            width: 35px;
+            height: 35px;
+            left: calc(83px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(128) {
+            animation: movetop 0.6s linear 0.737s;
+        }
+
+        .g-ball:nth-child(129) {
+            width: 13px;
+            height: 13px;
+            left: calc(85px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(129) {
+            animation: movetop 0.6s linear 0.472s;
+        }
+
+        .g-ball:nth-child(130) {
+            width: 14px;
+            height: 14px;
+            left: calc(22px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(130) {
+            animation: movetop 0.6s linear 1.083s;
+        }
+
+        .g-ball:nth-child(131) {
+            width: 40px;
+            height: 40px;
+            left: calc(96px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(131) {
+            animation: movetop 0.6s linear 0.29s;
+        }
+
+        .g-ball:nth-child(132) {
+            width: 25px;
+            height: 25px;
+            left: calc(83px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(132) {
+            animation: movetop 0.6s linear 0.314s;
+        }
+
+        .g-ball:nth-child(133) {
+            width: 7px;
+            height: 7px;
+            left: calc(64px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(133) {
+            animation: movetop 0.6s linear 0.383s;
+        }
+
+        .g-ball:nth-child(134) {
+            width: 19px;
+            height: 19px;
+            left: calc(100px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(134) {
+            animation: movetop 0.6s linear 1.32s;
+        }
+
+        .g-ball:nth-child(135) {
+            width: 42px;
+            height: 42px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(135) {
+            animation: movetop 0.6s linear 1.153s;
+        }
+
+        .g-ball:nth-child(136) {
+            width: 45px;
+            height: 45px;
+            left: calc(10px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(136) {
+            animation: movetop 0.6s linear 1.55s;
+        }
+
+        .g-ball:nth-child(137) {
+            width: 33px;
+            height: 33px;
+            left: calc(41px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(137) {
+            animation: movetop 0.6s linear 0.106s;
+        }
+
+        .g-ball:nth-child(138) {
+            width: 53px;
+            height: 53px;
+            left: calc(33px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(138) {
+            animation: movetop 0.6s linear 0.32s;
+        }
+
+        .g-ball:nth-child(139) {
+            width: 27px;
+            height: 27px;
+            left: calc(55px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(139) {
+            animation: movetop 0.6s linear 1.637s;
+        }
+
+        .g-ball:nth-child(140) {
+            width: 3px;
+            height: 3px;
+            left: calc(87px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(140) {
+            animation: movetop 0.6s linear 1.17s;
+        }
+
+        .g-ball:nth-child(141) {
+            width: 55px;
+            height: 55px;
+            left: calc(19px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(141) {
+            animation: movetop 0.6s linear 1.682s;
+        }
+
+        .g-ball:nth-child(142) {
+            width: 42px;
+            height: 42px;
+            left: calc(80px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(142) {
+            animation: movetop 0.6s linear 1.696s;
+        }
+
+        .g-ball:nth-child(143) {
+            width: 34px;
+            height: 34px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(143) {
+            animation: movetop 0.6s linear 1.69s;
+        }
+
+        .g-ball:nth-child(144) {
+            width: 4px;
+            height: 4px;
+            left: calc(18px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(144) {
+            animation: movetop 0.6s linear 1.204s;
+        }
+
+        .g-ball:nth-child(145) {
+            width: 60px;
+            height: 60px;
+            left: calc(77px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(145) {
+            animation: movetop 0.6s linear 1.328s;
+        }
+
+        .g-ball:nth-child(146) {
+            width: 25px;
+            height: 25px;
+            left: calc(14px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(146) {
+            animation: movetop 0.6s linear 0.652s;
+        }
+
+        .g-ball:nth-child(147) {
+            width: 35px;
+            height: 35px;
+            left: calc(26px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(147) {
+            animation: movetop 0.6s linear 0.092s;
+        }
+
+        .g-ball:nth-child(148) {
+            width: 49px;
+            height: 49px;
+            left: calc(28px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(148) {
+            animation: movetop 0.6s linear 1.936s;
+        }
+
+        .g-ball:nth-child(149) {
+            width: 4px;
+            height: 4px;
+            left: calc(51px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(149) {
+            animation: movetop 0.6s linear 1.354s;
+        }
+
+        .g-ball:nth-child(150) {
+            width: 54px;
+            height: 54px;
+            left: calc(95px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(150) {
+            animation: movetop 0.6s linear 0.5s;
+        }
+
+        .g-ball:nth-child(151) {
+            width: 34px;
+            height: 34px;
+            left: calc(79px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(151) {
+            animation: movetop 0.6s linear 1.63s;
+        }
+
+        .g-ball:nth-child(152) {
+            width: 54px;
+            height: 54px;
+            left: calc(50px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(152) {
+            animation: movetop 0.6s linear 0.864s;
+        }
+
+        .g-ball:nth-child(153) {
+            width: 60px;
+            height: 60px;
+            left: calc(72px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(153) {
+            animation: movetop 0.6s linear 0.166s;
+        }
+
+        .g-ball:nth-child(154) {
+            width: 49px;
+            height: 49px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(154) {
+            animation: movetop 0.6s linear 1.413s;
+        }
+
+        .g-ball:nth-child(155) {
+            width: 54px;
+            height: 54px;
+            left: calc(1px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(155) {
+            animation: movetop 0.6s linear 0.533s;
+        }
+
+        .g-ball:nth-child(156) {
+            width: 59px;
+            height: 59px;
+            left: calc(41px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(156) {
+            animation: movetop 0.6s linear 0.813s;
+        }
+
+        .g-ball:nth-child(157) {
+            width: 41px;
+            height: 41px;
+            left: calc(56px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(157) {
+            animation: movetop 0.6s linear 1.657s;
+        }
+
+        .g-ball:nth-child(158) {
+            width: 7px;
+            height: 7px;
+            left: calc(84px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(158) {
+            animation: movetop 0.6s linear 1.235s;
+        }
+
+        .g-ball:nth-child(159) {
+            width: 23px;
+            height: 23px;
+            left: calc(64px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(159) {
+            animation: movetop 0.6s linear 0.071s;
+        }
+
+        .g-ball:nth-child(160) {
+            width: 37px;
+            height: 37px;
+            left: calc(98px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(160) {
+            animation: movetop 0.6s linear 0.465s;
+        }
+
+        .g-ball:nth-child(161) {
+            width: 28px;
+            height: 28px;
+            left: calc(41px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(161) {
+            animation: movetop 0.6s linear 0.746s;
+        }
+
+        .g-ball:nth-child(162) {
+            width: 55px;
+            height: 55px;
+            left: calc(3px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(162) {
+            animation: movetop 0.6s linear 1.366s;
+        }
+
+        .g-ball:nth-child(163) {
+            width: 48px;
+            height: 48px;
+            left: calc(23px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(163) {
+            animation: movetop 0.6s linear 0.815s;
+        }
+
+        .g-ball:nth-child(164) {
+            width: 10px;
+            height: 10px;
+            left: calc(23px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(164) {
+            animation: movetop 0.6s linear 1.469s;
+        }
+
+        .g-ball:nth-child(165) {
+            width: 44px;
+            height: 44px;
+            left: calc(63px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(165) {
+            animation: movetop 0.6s linear 1.993s;
+        }
+
+        .g-ball:nth-child(166) {
+            width: 27px;
+            height: 27px;
+            left: calc(76px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(166) {
+            animation: movetop 0.6s linear 0.164s;
+        }
+
+        .g-ball:nth-child(167) {
+            width: 1px;
+            height: 1px;
+            left: calc(49px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(167) {
+            animation: movetop 0.6s linear 0.464s;
+        }
+
+        .g-ball:nth-child(168) {
+            width: 45px;
+            height: 45px;
+            left: calc(16px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(168) {
+            animation: movetop 0.6s linear 1.15s;
+        }
+
+        .g-ball:nth-child(169) {
+            width: 10px;
+            height: 10px;
+            left: calc(29px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(169) {
+            animation: movetop 0.6s linear 1.074s;
+        }
+
+        .g-ball:nth-child(170) {
+            width: 59px;
+            height: 59px;
+            left: calc(28px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(170) {
+            animation: movetop 0.6s linear 0.679s;
+        }
+
+        .g-ball:nth-child(171) {
+            width: 48px;
+            height: 48px;
+            left: calc(4px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(171) {
+            animation: movetop 0.6s linear 0.398s;
+        }
+
+        .g-ball:nth-child(172) {
+            width: 14px;
+            height: 14px;
+            left: calc(94px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(172) {
+            animation: movetop 0.6s linear 1.951s;
+        }
+
+        .g-ball:nth-child(173) {
+            width: 45px;
+            height: 45px;
+            left: calc(38px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(173) {
+            animation: movetop 0.6s linear 0.68s;
+        }
+
+        .g-ball:nth-child(174) {
+            width: 32px;
+            height: 32px;
+            left: calc(12px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(174) {
+            animation: movetop 0.6s linear 0.566s;
+        }
+
+        .g-ball:nth-child(175) {
+            width: 51px;
+            height: 51px;
+            left: calc(46px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(175) {
+            animation: movetop 0.6s linear 0.731s;
+        }
+
+        .g-ball:nth-child(176) {
+            width: 34px;
+            height: 34px;
+            left: calc(46px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(176) {
+            animation: movetop 0.6s linear 1.263s;
+        }
+
+        .g-ball:nth-child(177) {
+            width: 1px;
+            height: 1px;
+            left: calc(13px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(177) {
+            animation: movetop 0.6s linear 0.448s;
+        }
+
+        .g-ball:nth-child(178) {
+            width: 25px;
+            height: 25px;
+            left: calc(25px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(178) {
+            animation: movetop 0.6s linear 0.497s;
+        }
+
+        .g-ball:nth-child(179) {
+            width: 54px;
+            height: 54px;
+            left: calc(90px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(179) {
+            animation: movetop 0.6s linear 0.26s;
+        }
+
+        .g-ball:nth-child(180) {
+            width: 15px;
+            height: 15px;
+            left: calc(79px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(180) {
+            animation: movetop 0.6s linear 0.181s;
+        }
+
+        .g-ball:nth-child(181) {
+            width: 48px;
+            height: 48px;
+            left: calc(66px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(181) {
+            animation: movetop 0.6s linear 0.158s;
+        }
+
+        .g-ball:nth-child(182) {
+            width: 13px;
+            height: 13px;
+            left: calc(24px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(182) {
+            animation: movetop 0.6s linear 0.626s;
+        }
+
+        .g-ball:nth-child(183) {
+            width: 46px;
+            height: 46px;
+            left: calc(46px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(183) {
+            animation: movetop 0.6s linear 1.376s;
+        }
+
+        .g-ball:nth-child(184) {
+            width: 21px;
+            height: 21px;
+            left: calc(51px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(184) {
+            animation: movetop 0.6s linear 1.156s;
+        }
+
+        .g-ball:nth-child(185) {
+            width: 35px;
+            height: 35px;
+            left: calc(90px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(185) {
+            animation: movetop 0.6s linear 0.175s;
+        }
+
+        .g-ball:nth-child(186) {
+            width: 17px;
+            height: 17px;
+            left: calc(3px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(186) {
+            animation: movetop 0.6s linear 0.425s;
+        }
+
+        .g-ball:nth-child(187) {
+            width: 21px;
+            height: 21px;
+            left: calc(77px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(187) {
+            animation: movetop 0.6s linear 1.825s;
+        }
+
+        .g-ball:nth-child(188) {
+            width: 36px;
+            height: 36px;
+            left: calc(47px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(188) {
+            animation: movetop 0.6s linear 1.528s;
+        }
+
+        .g-ball:nth-child(189) {
+            width: 30px;
+            height: 30px;
+            left: calc(2px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(189) {
+            animation: movetop 0.6s linear 0.042s;
+        }
+
+        .g-ball:nth-child(190) {
+            width: 35px;
+            height: 35px;
+            left: calc(8px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(190) {
+            animation: movetop 0.6s linear 1.784s;
+        }
+
+        .g-ball:nth-child(191) {
+            width: 1px;
+            height: 1px;
+            left: calc(54px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(191) {
+            animation: movetop 0.6s linear 0.751s;
+        }
+
+        .g-ball:nth-child(192) {
+            width: 45px;
+            height: 45px;
+            left: calc(89px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(192) {
+            animation: movetop 0.6s linear 1.047s;
+        }
+
+        .g-ball:nth-child(193) {
+            width: 4px;
+            height: 4px;
+            left: calc(95px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(193) {
+            animation: movetop 0.6s linear 1.113s;
+        }
+
+        .g-ball:nth-child(194) {
+            width: 41px;
+            height: 41px;
+            left: calc(42px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(194) {
+            animation: movetop 0.6s linear 1.609s;
+        }
+
+        .g-ball:nth-child(195) {
+            width: 34px;
+            height: 34px;
+            left: calc(4px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(195) {
+            animation: movetop 0.6s linear 0.429s;
+        }
+
+        .g-ball:nth-child(196) {
+            width: 3px;
+            height: 3px;
+            left: calc(42px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(196) {
+            animation: movetop 0.6s linear 1.419s;
+        }
+
+        .g-ball:nth-child(197) {
+            width: 26px;
+            height: 26px;
+            left: calc(34px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(197) {
+            animation: movetop 0.6s linear 1.292s;
+        }
+
+        .g-ball:nth-child(198) {
+            width: 1px;
+            height: 1px;
+            left: calc(22px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(198) {
+            animation: movetop 0.6s linear 1.677s;
+        }
+
+        .g-ball:nth-child(199) {
+            width: 41px;
+            height: 41px;
+            left: calc(98px + 30px);
+        }
+
+        .g-btn:hover .g-ball:nth-child(199) {
+            animation: movetop 0.6s linear 0.498s;
+        }
+
+        @keyframes movetop {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(0, -180px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="g-btn">
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+        <div class="g-ball"> </div>
+    </div>
+</body>
+
+</html>
