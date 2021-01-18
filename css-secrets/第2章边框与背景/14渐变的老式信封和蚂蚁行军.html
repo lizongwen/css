@@ -1,138 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background: blue; */
+      }
+      .box1 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        background: repeating-linear-gradient(
+            45deg,
+            red 0,
+            red 3%,
+            transparent 0,
+            transparent 6%,
+            #58a 0,
+            #58a 9%,
+            transparent 0,
+            transparent 12%
+          )
+          border-box;
+      }
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<style>
-		body{
-			background: blue;
-		}
-		.box1 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			background:
-				repeating-linear-gradient(45deg, red 0, red 3%, transparent 0, transparent 6%, #58a 0, #58a 9%, transparent 0, transparent 12%) border-box
-		}
+      .box2 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        outline: 5px solid red;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(
+              45deg,
+              red 0,
+              red 3%,
+              transparent 0,
+              transparent 6%,
+              #58a 0,
+              #58a 9%,
+              transparent 0,
+              transparent 12%
+            )
+            border-box;
+      }
 
-		.box2 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			outline:5px solid red;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, red 0, red 3%, transparent 0, transparent 6%, #58a 0, #58a 9%, transparent 0, transparent 12%) border-box
-		}
+      .box3 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        background: repeating-linear-gradient(
+            45deg,
+            red 0,
+            red 12.5%,
+            transparent 0,
+            transparent 25%,
+            #58a 0,
+            #58a 37.5%,
+            transparent 0,
+            transparent 50%
+          )
+          0/50px 50px;
+      }
 
-		.box3 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			background:
-				repeating-linear-gradient(45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0/50px 50px
-		}
+      .box4 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(
+              45deg,
+              red 0,
+              red 12.5%,
+              transparent 0,
+              transparent 25%,
+              #58a 0,
+              #58a 37.5%,
+              transparent 0,
+              transparent 50%
+            )
+            0/50px 50px;
+      }
 
-		.box4 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0/50px 50px
-		}
+      .box5 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        animation: ants 12s linear infinite;
+        background: repeating-linear-gradient(
+            45deg,
+            red 0,
+            red 12.5%,
+            transparent 0,
+            transparent 25%,
+            #58a 0,
+            #58a 37.5%,
+            transparent 0,
+            transparent 50%
+          )
+          0/50px 50px;
+      }
 
-		.box5 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			animation: ants 12s linear infinite;
-			background:
-				repeating-linear-gradient(45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0/50px 50px
-		}
+      .box6 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        animation: ants 12s linear infinite;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(
+              45deg,
+              red 0,
+              red 12.5%,
+              transparent 0,
+              transparent 25%,
+              #58a 0,
+              #58a 37.5%,
+              transparent 0,
+              transparent 50%
+            )
+            0/50px 50px;
+      }
 
-		.box6 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			animation: ants 12s linear infinite;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0/50px 50px
-		}
+      .box7 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        background: repeating-linear-gradient(
+            45deg,
+            black 0,
+            black 25%,
+            #fff 0,
+            #fff 50%
+          )
+          0/10px 10px;
+      }
 
-		.box7 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			background:
-				repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%) 0/10px 10px
-		}
+      .box8 {
+        width: 300px;
+        height: 100px;
+        border: 10px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%)
+            0/10px 10px;
+      }
 
-		.box8 {
-			width: 300px;
-			height: 100px;
-			border: 10px solid transparent;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%) 0/10px 10px
-		}
+      .box9 {
+        width: 300px;
+        height: 100px;
+        border: 2px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%)
+            0/10px 10px;
+      }
 
-		.box9 {
-			width: 300px;
-			height: 100px;
-			border: 2px solid transparent;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%) 0/10px 10px
-		}
+      .box10 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid transparent;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%)
+            0/10px 10px;
+      }
 
-		.box10 {
-			width: 300px;
-			height: 100px;
-			border: 1px solid transparent;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%) 0/10px 10px
-		}
+      .box11 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid transparent;
+        animation: ants 12s linear infinite;
+        background: linear-gradient(#fff, #fff) padding-box,
+          repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%)
+            0/10px 10px;
+      }
+      .box12 {
+        width: 300px;
+        height: 100px;
+        animation: ants1 1s infinite linear;
+        background: linear-gradient(90deg, black 50%, transparent 0) repeat-x,
+          linear-gradient(black 50%, transparent 0) repeat-y,
+          linear-gradient(90deg, black 50%, transparent 0) repeat-x,
+          linear-gradient(black 50%, transparent 0) repeat-y;
+        background-size: 10px 1px, 1px 10px;
+        background-position: 0 0, 100% 0, 0 100%, 0 0;
+      }
 
-		.box11 {
-			width: 300px;
-			height: 100px;
-			border: 1px solid transparent;
-			animation: ants 12s linear infinite;
-			background:
-				linear-gradient(#fff, #fff) padding-box,
-				repeating-linear-gradient(45deg, black 0, black 25%, #fff 0, #fff 50%) 0/10px 10px
-		}
+      @keyframes ants {
+        to {
+          background-position: 50%;
+        }
 
-		@keyframes ants {
-			to {
-				background-position: 50%
-			}
+        form {
+          background-position: 0%;
+        }
+      }
+      @keyframes ants1 {
+        100% {
+          background-position: 10px 0, 100% 10px, -10px 100%, 0 -10px;
+        }
+      }
+    </style>
+  </head>
 
-			form {
-				background-position: 0%
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<div class="box1"></div><br />
-	<div class="box2"></div><br />
-	<div class="box3"></div><br />
-	<div class="box4"></div><br />
-	<div class="box5"></div><br />
-	<div class="box6"></div><br />
-	<div class="box7"></div><br />
-	<div class="box8"></div><br />
-	<div class="box9"></div><br />
-	<div class="box10">边框宽度减少到1</div><br />
-	<div class="box11"></div><br />
-</body>
-
+  <body>
+    <div class="box1"></div>
+    <br />
+    <div class="box2"></div>
+    <br />
+    <div class="box3"></div>
+    <br />
+    <div class="box4"></div>
+    <br />
+    <div class="box5"></div>
+    <br />
+    <div class="box6"></div>
+    <br />
+    <div class="box7"></div>
+    <br />
+    <div class="box8"></div>
+    <br />
+    <div class="box9"></div>
+    <br />
+    <div class="box10">边框宽度减少到1</div>
+    <br />
+    <div class="box11"></div>
+    <br />
+    <div class="box12"></div>
+    <br />
+  </body>
 </html>
