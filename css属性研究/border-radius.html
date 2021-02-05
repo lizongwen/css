@@ -5,20 +5,18 @@
     <title></title>
     <style>
       .box {
+        width: 500px;
+        height: 500px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%); /*safari*/
-        width: 500px;
-        height: 500px;
         background: lawngreen;
         transition: border-radius 2s;
         /*水平半径(左上，右上，右下，左下)/垂直半径(左上，右上，右下，左下)*/
         /*border-radius: 300px 200px 300px 400px/200px 300px 400px 500px;*/
         border-radius: 300px 200px/300px 200px 250px; /*相当与border-radius: 300px 200px 300px 200px/300px 200px 300px 200px;*/
-        behavior: url(PIE.htc);
-        /* animation: wave 1s linear infinite alternate; */
+        animation: wave 1s linear infinite alternate;
       }
       /* .box:hover {
         border-radius: 300px 600px/500px 500px;
@@ -30,10 +28,9 @@
         background: #0fb705;
         border-radius: 25px;
         transition: background 0.3s ease-in-out;
-        behavior: url(PIE.htc);
       }
       .box2.unswitch {
-        background: lavender;
+        background: rgb(208, 208, 211);
       }
       .switch-label {
         width: 50%;
@@ -41,7 +38,6 @@
         border-radius: 25px;
         background: lawngreen;
         transition: margin-left 0.3s ease-in-out;
-        behavior: url(PIE.htc);
       }
       .switch-label.right {
         margin-left: 50px;
