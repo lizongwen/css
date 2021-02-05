@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style type="text/css">
-			div{
-				font-size: 50px;
-				font-weight: 600;
-				border: 10px solid lawngreen;
-				padding: 20px;
-				width: 200px;
-				height: 200px;
-				background-color: lightcoral;
-			}
-			.box1{
-				/*以内容区四边为界向外裁切背景*/
-				background-clip: content-box;
-			}
-			.box2{
-				/*以前景区内容周围为界向外裁切背景*/
-				background-clip: text;
-				-webkit-text-fill-color:transparent;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="box1">我是内容</div>
-		<div class="box2">我是内容</div>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		div {
+			font-size: 50px;
+			font-weight: 600;
+			border: 10px solid rgba(0, 0, 0, .5);
+			padding: 20px;
+			width: 200px;
+			height: 200px;
+			/* 背景色 */
+			background-color: lightcoral;
+		}
+
+		.box1 {
+			/*以内容区四边为界向外裁切背景*/
+			background-clip: content-box;
+		}
+
+		.box2 {
+			/*以前景区内容周围为界向外裁切背景*/
+			-webkit-background-clip: text;
+			/* -webkit-text-fill-color:transparent; */
+			color: transparent;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">我是内容</div>
+	<div class="box2">我是内容</div>
+</body>
+
 </html>
